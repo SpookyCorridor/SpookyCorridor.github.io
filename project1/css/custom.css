@@ -1,8 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800,400|Alegreya|Varela+Round|Arvo);
 body {
-  background-color: #AC9DE0; }
+  background-color: #AC9DE0;
+  font-family: 'Alegreya', serif; }
   body h1 {
     display: inline;
-    font-weight: 800;
+    font-family: 'Varela Round', sans-serif;
     color: #5EF7BD; }
   body a {
     text-decoration: none;
@@ -11,6 +13,20 @@ body {
     display: none; }
   body #choice-video {
     display: none; }
+  body #wallpaper-advanced {
+    display: none; }
+  body span #advanced {
+    background-color: #5EF7BD;
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    color: pink;
+    transition: border .5s, color .5s; }
+  body span #advanced:hover {
+    border: 1px solid pink;
+    color: #474F4B; }
 
 nav ul {
   list-style: none;
@@ -23,6 +39,7 @@ nav li {
 
 section {
   color: #FFFF31;
+  font-family: "Arvo";
   font-size: 5rem;
   font-weight: 800;
   padding: 1em;
@@ -61,5 +78,23 @@ section {
   section :-moz-placeholder {
     /* Firefox 18- */
     color: #FFFF31; }
+  section img {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto; }
+
+/*@media only screen and (min-width: $break-small) and (max-width: $break-medium) {
+	body {
+		background-color: yellow; 
+	}
+}
+
+@media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) {
+
+	body {
+		background-color: red; 
+	}
+}
+*/
 
 /*# sourceMappingURL=custom.css.map */

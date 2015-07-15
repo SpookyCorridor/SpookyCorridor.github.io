@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -25,39 +25,53 @@
 
 	
 	<section class="row">
-			I want a 
-				<span>
-					<a href="#" id="wallpaper"> wallpaper </a> | <a href="#" id="video"> video </a>
-				</span>
-				
-				<!--use chose wallpaper --> 
-				<span id="choice-wallpaper"> 
-				of 
-				<input type="text" id="search-terms" name="search_terms">
-				from
-				<input type="text" id="search-subreddit" placeholder=""name = "search_subreddit"> sorted by  
-				<input type="text" id="search_sort" name="user_date_start" placeholder="">
-				in the past  
-				<input type="text" id="search_time" name="user_date_end">
-				<input type="submit" id="form-send" value="&#9825"> 
-				</span>
+		I want a  
+		<span>
+			<a href="#" id="wallpaper"> wallpaper </a> | <a href="#" id="video"> video </a>
+		</span>
+		
+		<!--use chose wallpaper --> 
+		<span id="choice-wallpaper"> 
+			of 
+			<input type="text" id="search-terms" name="search_terms">
+			from
+			<input type="text" id="search-subreddit" placeholder=""name = "search_subreddit"> sorted by  
+			<input type="text" id="search-sort" name="search_sort" placeholder="">
+			in the past  
+			<input type="text" id="search-time" name="search_time"> 
+			<!--show advanced options --> 
+			<button id="advanced">...</button> 
 
-				<!--user chose video --> 
+			<input type="submit" id="form-send" value="&#9825"> 
+		</span>
 
-				<span id="choice-video"> 
-				of 
-				<input type="text" id="search-terms" name="search_terms">
-				from
-				<input type="text" id="search-subreddit" placeholder=""name = "search_subreddit"> sorted by  
-				<input type="text" id="search_sort" name="user_date_start" placeholder="">
-				in the past  
-				<input type="text" id="search_time" name="user_date_end">
-				<input type="submit" id="form-send" value="&#9825"> 
-				</span>
+		<span id="wallpaper-advanced">
+			that comes from 
+			<input type="text" id="search-source" name="search_source"> 
+			and is posted by 
+			<input type="text" id="search-username" name="search_username">
+
+		</span> <!-- end advanced wallpaper options --> 
+
+
+		<!--user chose video --> 
+
+		<span id="choice-video"> 
+			of 
+			<input type="text" id="search-terms" name="search_terms">
+			from
+			<input type="text" id="search-subreddit" placeholder=""name = "search_subreddit"> sorted by  
+			<input type="text" id="search_sort" name="user_date_start" placeholder="">
+			in the past  
+			<input type="text" id="search_time" name="user_date_end">
+			<input type="submit" id="form-send" value="&#9825"> 
+		</span>
+
+
 			
 	</section>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
-</html>
+</html>]

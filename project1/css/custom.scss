@@ -1,14 +1,14 @@
-$primary-color: #AC9DE0; 
-$secondary-color: #474F4B; 
-$font-color: #5EF7BD; 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800,400|Alegreya|Varela+Round|Arvo);
+@import 'variables.scss'; 
 
 body {
 	background-color: $primary-color;
+	font-family: 'Alegreya', serif;
 
 	h1 {
 		display: inline; 
-		font-weight: 800;
-		color: #5EF7BD;
+		font-family: 'Varela Round', sans-serif; 
+		color: $logo-color;
 	}
 
 	a {
@@ -24,6 +24,29 @@ body {
 		display: none; 
 	}
 
+	#wallpaper-advanced {
+		display: none; 
+	}
+
+	span {
+		
+		#advanced {
+			background-color: $logo-color;
+			font-size: 3rem;
+			border-radius: 50%; 
+			width: 60px;
+			height: 60px;
+			padding: 0;
+			color: pink;
+			transition: border .5s, color .5s;
+		}
+
+		#advanced:hover {
+    		border: 1px solid pink;
+    		color: $nav-color;
+   		 }
+
+	}
 }
 
 nav {
@@ -32,7 +55,7 @@ nav {
 		list-style: none;
 		display: inline-block;
 		font-size: 2rem;
-		color: #474F4B;	
+		color: $nav-color;	
 	}
 
 	li {
@@ -43,11 +66,14 @@ nav {
 	a {
 
 	}
+
 }
+
 
 section {
 
-	color: #FFFF31;
+	color: $secondary-color;
+	font-family: "Arvo";
     font-size: 5rem;
     font-weight:800; 
     padding: 1em;
@@ -65,21 +91,21 @@ section {
 	input[type="text"] {
 		background-color: rgba(255,255,255,.0);
 		border-style: none;
-		border-bottom: 2px solid #FFFF31;
+		border-bottom: 2px solid $secondary-color;
 		appearance:none;
 		max-width: 250px;
 	}
 	input[type="number"] {
 		background-color: rgba(255,255,255,.0);
 		border-style: none;
-		border-bottom: 2px solid #FFFF31;
+		border-bottom: 2px solid $secondary-color;
 		text-align: center;
 	}
 	input[type="month"] {
 
 	}
 	input[type="submit"] {
-		background-color: #5EF7BD;
+		background-color: $logo-color;
 		font-size: 3rem;
 		border-radius: 50%; 
 		width: 60px;
@@ -94,11 +120,32 @@ section {
     }
 
 	::-webkit-input-placeholder {
-   color: #FFFF31;
+   color: $secondary-color;
 	}
 
 	:-moz-placeholder { /* Firefox 18- */
-   color: #FFFF31;  
+   color: $secondary-color;  
+	}
+
+	img {
+		max-width: 500px;
+		max-height: 500px;
+		margin: 0 auto;
+		
 	}
 
 }
+
+/*@media only screen and (min-width: $break-small) and (max-width: $break-medium) {
+	body {
+		background-color: yellow; 
+	}
+}
+
+@media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) {
+
+	body {
+		background-color: red; 
+	}
+}
+*/ 
