@@ -3,7 +3,8 @@ $(document).ready(function() {
 	console.log("Resources loaded");
 
 	// contact submit event handler
-	$('#form-send').on('click', function() {
+	$('#form-send').on('click', function() {	
+		$('img').detach(); 
 		app.buildQuery();
 		console.log('Clicked form submit..');
 	}); 
@@ -14,6 +15,7 @@ $(document).ready(function() {
 		$(this).parent().text(choice);
 		if (choice == 'wallpaper') {
 			$('#choice-wallpaper').fadeIn();
+
 		} else if (choice == 'video') {
 			$('#choice-video').fadeIn();
 		}
@@ -47,7 +49,7 @@ app.createFormObject = function() {
 //get JSON with user defined query  
 app.buildQuery = function(data) {
 	data = app.createFormObject();
-	var num = Math.floor(Math.random() * 6 + 1); 
+	var num = Math.floor(Math.random() * 100 + 1); //random indice
 	var sub = data.searchSubr;
 	var tags = data.searchTerms; 
 	var time = data.searchTime; 
@@ -60,17 +62,23 @@ app.buildQuery = function(data) {
 
 
 app.generateContent = function(link) {
-	//working direct link 
-	if ( link.indexOf('i.imgur') >= 0 ) {
-		console.log(link + ' is i'); 
-		$('section').append('<img src="' + link + '">');
-	} // fix link path to i.imgur instead of imgur
-	  // and append img extention 
-	else if (!link.indexOf('i.imgur') >= 0) {
-		console.log(link + ' is not i'); 
-		var newLink = link.slice(7);
-		$('section').append('<img src="https://i.' + newLink + '.jpg">');
-		console.log(newLink + ' !!!'); 
-	} 
+	
+	/* ----- start wallpaper build ------ */ 
+	if ( $('#choice-wallpaper').css('display') === 'inline') {
+		//working direct link 
+		if ( link.indexOf('i.imgur') >= 0 ) {
+			console.log(link + ' is i'); 
+			$('section').append('<img src="' + link + '">');
+		} // fix link path to i.imgur instead of imgur
+		  // and append img extention 
+		else if (!link.indexOf('i.imgur') >= 0) {
+			console.log(link + ' is not i'); 
+			var newLink = link.slice(7);
+			$('section').append('<img src="https://i.' + newLink + '.jpg">');
+			console.log(newLink + ' !!!'); 
+		} else if ( $('#choice-video').css('display' === 'inline') {
+			// video output 
+		});
+	}
 
 }
