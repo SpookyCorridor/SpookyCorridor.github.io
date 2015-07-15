@@ -60,12 +60,17 @@ app.buildQuery = function(data) {
 
 
 app.generateContent = function(link) {
+	//working direct link 
 	if ( link.indexOf('i.imgur') >= 0 ) {
-		console.log(link + 'is i'); 
-		$('section').append('<img src="' + link + '.jpg">');
-	} else {
-		console.log(link + 'is not i'); 
+		console.log(link + ' is i'); 
 		$('section').append('<img src="' + link + '">');
-	}
+	} // fix link path to i.imgur instead of imgur
+	  // and append img extention 
+	else if (!link.indexOf('i.imgur') >= 0) {
+		console.log(link + ' is not i'); 
+		var newLink = link.slice(7);
+		$('section').append('<img src="https://i.' + newLink + '.jpg">');
+		console.log(newLink + ' !!!'); 
+	} 
 
 }
