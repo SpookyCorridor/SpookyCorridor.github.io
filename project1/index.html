@@ -5,41 +5,58 @@
 	<title>Crumblr</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
-  	<link rel="stylesheet" href="css/skeleton.css">
+  	<link rel="stylesheet" href="css/skeleton.css"> 
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
 
 </head>
 <body>
-	<div class="container .u-full-width">
-		<nav class="row">
-			<h1 id="logo">Crumblr</h1>
+	<div class="container">
+	<h1>Crumblr</h1>
+		<nav class="u-pull-right">
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
 		</nav>
-		<section class="row">
-
-			<h3>Contact Me</h3>
-
-			<input type="text" id="user_name" placeholder="Enter tumblr username"> <br>
-
-			<input type="text" id="user_search_terms" placeholder="Enter search terms"> <br>
-			
-			<label for="user_search_amt">Number of Requests: </label>
-			<input type="number" id="user_search_amt"
-				name="user_search_amt"
-				min="0"
-				max="20"
-				step="1"
-				value="5"> <br> 
-			
-			<label for="search_date_start">Select a date range: </label>
-			<input type="month" id="user_date_start" name="user_date_start"> to 
-			<input type="month" id="user_date_end" name="user_date_end"> <br > 
-
-			<input type="submit" id="form_send" value="Contact">
-
-
-		</section> 
+		
 	</div>
+
+	
+	<section class="row">
+			I want a 
+				<span>
+					<a href="#" id="wallpaper"> wallpaper </a> | <a href="#" id="video"> video </a>
+				</span>
+				
+				<!--use chose wallpaper --> 
+				<span id="choice-wallpaper"> 
+				of 
+				<input type="text" id="search-terms" name="search_terms">
+				from
+				<input type="text" id="search-subreddit" placeholder=""name = "search_subreddit"> sorted by  
+				<input type="text" id="search_sort" name="user_date_start" placeholder="">
+				in the past  
+				<input type="text" id="search_time" name="user_date_end">
+				<input type="submit" id="form-send" value="&#9825"> 
+				</span>
+
+				<!--user chose video --> 
+
+				<span id="choice-video"> 
+				of 
+				<input type="text" id="search-terms" name="search_terms">
+				from
+				<input type="text" id="search-subreddit" placeholder=""name = "search_subreddit"> sorted by  
+				<input type="text" id="search_sort" name="user_date_start" placeholder="">
+				in the past  
+				<input type="text" id="search_time" name="user_date_end">
+				<input type="submit" id="form-send" value="&#9825"> 
+				</span>
+			
+	</section>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>

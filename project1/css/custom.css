@@ -1,3 +1,65 @@
-h1#logo {
-	text-align: center; 
-}
+body {
+  background-color: #AC9DE0; }
+  body h1 {
+    display: inline;
+    font-weight: 800;
+    color: #5EF7BD; }
+  body a {
+    text-decoration: none;
+    color: pink; }
+  body #choice-wallpaper {
+    display: none; }
+  body #choice-video {
+    display: none; }
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+  font-size: 2rem;
+  color: #474F4B; }
+nav li {
+  display: inline-block;
+  margin: 0 10px; }
+
+section {
+  color: #FFFF31;
+  font-size: 5rem;
+  font-weight: 800;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+  section select {
+    background-color: #AC9DE0;
+    -webkit-appearance: none; }
+  section input[type="text"] {
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    border-bottom: 2px solid #FFFF31;
+    appearance: none;
+    max-width: 250px; }
+  section input[type="number"] {
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    border-bottom: 2px solid #FFFF31;
+    text-align: center; }
+  section input[type="submit"] {
+    background-color: #5EF7BD;
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    color: pink;
+    transition: border .5s, color .5s; }
+  section input[type="submit"]:hover {
+    border: 1px solid pink; }
+  section ::-webkit-input-placeholder {
+    color: #FFFF31; }
+  section :-moz-placeholder {
+    /* Firefox 18- */
+    color: #FFFF31; }
+
+/*# sourceMappingURL=custom.css.map */
