@@ -1,14 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800,400|Alegreya|Varela+Round|Arvo);
 @import 'variables.scss'; 
 
-html {
-	font-size: 16px;
-}
+
 body {
 	background-color: $primary-color;
 	font-family: 'Alegreya', serif;
+	width: 90%;
+	margin: 0 auto;
 	
-
 	a {
 		text-decoration: none;
 		color: pink;
@@ -28,8 +27,8 @@ body {
 			border-radius: 50%;
 			color: pink;
 			transition: border .5s, color .5s;
-			width: 45px;
-			height: 45px;
+			width: 40px;
+			height: 40px;
 			font-size: 1.7rem;
 		}
 
@@ -71,10 +70,10 @@ nav {
 section {
 
 	color: $secondary-color;
-	width: 90%;	
 	font-family: "Arvo";
     font-size: $section-phone;
-    font-weight:800; 
+    font-weight: 800; 
+    text-align: center;
   
 
     select {
@@ -100,8 +99,8 @@ section {
 		background-color: $logo-color;
 		font-size: 1.7rem;
 		border-radius: 50%; 
-		width: 45px;
-		height: 45px;
+		width: 40px;
+		height: 40px;
 		padding: 0;
 		color: pink;
 		transition: border .5s, color .5s;
@@ -128,18 +127,19 @@ section {
 
 }
 
-@media only screen and (min-width: $break-phone) and (max-width: $break-tablet) {
+@media only screen and (min-width: $break-phone + 1) and (max-width: $break-tablet) {
 		
 	section {
 		margin: 0 auto;
 		text-align: center;
-		width: 80%;
+		width: 85%;
 		padding: 20px;
-		font-size: 3rem;
+		font-size: 4.5rem;
 
 		input[type="text"] {
-		width: 165px;
+			width: 165px;
 		}
+
 	}
 
 	nav {
@@ -185,7 +185,7 @@ section {
 		text-align: center;
 		width: 95%;
 		padding: 20px;
-		font-size: 3rem;
+		font-size: 4.5rem;
 
 		input[type="text"] {
 		width: 165px;

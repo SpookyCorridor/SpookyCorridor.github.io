@@ -1,10 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800,400|Alegreya|Varela+Round|Arvo);
-html {
-  font-size: 16px; }
-
 body {
   background-color: #AC9DE0;
-  font-family: 'Alegreya', serif; }
+  font-family: 'Alegreya', serif;
+  width: 90%;
+  margin: 0 auto; }
   body a {
     text-decoration: none;
     color: pink; }
@@ -17,8 +16,8 @@ body {
     border-radius: 50%;
     color: pink;
     transition: border .5s, color .5s;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     font-size: 1.7rem; }
   body span #advanced:hover {
     border: 1px solid pink;
@@ -41,10 +40,10 @@ nav li.nav {
 
 section {
   color: #FFFF31;
-  width: 90%;
   font-family: "Arvo";
   font-size: 1.5rem;
-  font-weight: 800; }
+  font-weight: 800;
+  text-align: center; }
   section select {
     background-color: #AC9DE0;
     -webkit-appearance: none; }
@@ -63,8 +62,8 @@ section {
     background-color: #5EF7BD;
     font-size: 1.7rem;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     color: pink;
     transition: border .5s, color .5s; }
@@ -80,13 +79,13 @@ section {
     max-height: 500px;
     margin: 0 auto; }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 321px) and (max-width: 768px) {
   section {
     margin: 0 auto;
     text-align: center;
-    width: 80%;
+    width: 85%;
     padding: 20px;
-    font-size: 3rem; }
+    font-size: 4.5rem; }
     section input[type="text"] {
       width: 165px; }
 
@@ -117,7 +116,7 @@ section {
     text-align: center;
     width: 95%;
     padding: 20px;
-    font-size: 3rem; }
+    font-size: 4.5rem; }
     section input[type="text"] {
       width: 165px; }
 
