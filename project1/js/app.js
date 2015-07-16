@@ -61,26 +61,30 @@ app.buildQuery = function(data) {
 	var time = data.searchTime; 
 
 	//add width and height reqs 
-	 
+	var reqestedSize = [parseInt(data.searchWidth), parseInt(data.searchHeight)];
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
 	tags + '&restrict_sr=' + sub + '&t=' + time + '&limit=100';
 	$.getJSON(searchQuery, function(data) {
-      	return app.generateContent(data.data.children[num].data.url, [data.data.children[num].data.preview.images[0].source.width,
+      	return app.generateContent(data.data.children[num].data.url,
+      			reqestedSize,
+      			//grab image dimensions 
+      		   [data.data.children[num].data.preview.images[0].source.width,
 				data.data.children[num].data.preview.images[0].source.height]);
 });
 }
 
 
-app.generateContent = function(link, size) {
+app.generateContent = function(link, requestedSize, size) {
+	
 	console.log(size);
 	/* ----- start wallpaper build ------ */ 
 	if ( $('#choice-wallpaper').css('display') === 'inline') {
 		
-
+		
 		// TODO: 
 		// check for min width and height and 
 		// provide link under responsive image
-
+		
 		//working direct link 
 		if ( link.indexOf('i.imgur') >= 0 ) {
 			console.log(link + ' is i'); 
