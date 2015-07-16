@@ -18,10 +18,10 @@ $(document).ready(function() {
 		console.log(choice);
 		$(this).parent().text(choice);
 		if (choice == 'wallpaper') {
-			$('#choice-wallpaper').fadeIn();
+			$('.choices').prop('id', 'choice-wallpaper').fadeIn();
 
 		} else if (choice == 'video') {
-			$('#choice-video').fadeIn();
+			$('.choices').prop('id', 'choice-wallpaper').fadeIn();
 		}
 		
 	}); // end span click 
