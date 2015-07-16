@@ -33,6 +33,7 @@ $(document).ready(function() {
 		$('#wallpaper-advanced').fadeIn().append('');
 
 	});
+
 });
 
 var app = app || {}; 
@@ -55,7 +56,7 @@ app.createFormObject = function() {
 //get JSON with user defined query  
 app.buildQuery = function(data) {
 	data = app.createFormObject();
-	var a; 
+	var a; // for generateContent to return after loop
 	// namespace to app.num later to try 
 	var num = Math.floor(Math.random() * 100); //random indice
 	var sub = data.searchSubr;
@@ -79,6 +80,7 @@ app.buildQuery = function(data) {
 		size = [data.data.children[num].data.preview.images[0].source.width,
 				data.data.children[num].data.preview.images[0].source.height];
 		} while ((requestedSize[0] > size[0] || requestedSize[1] > size[1]));
+			
 			return a;
       		
 	});
@@ -100,8 +102,7 @@ app.generateContent = function(link, requestedSize, size) {
 		//working direct link 
 		if ( link.indexOf('i.imgur') >= 0 ) {
 			console.log(link + ' is i'); 
-			$('section').children().hide();
-			$('section').append('<img src="' + link + '">');
+			$('section').append('<img id= "img" src="' + link + '">');
 
 			
 		} // fix link path to i.imgur instead of imgur
@@ -109,14 +110,15 @@ app.generateContent = function(link, requestedSize, size) {
 		else if (!link.indexOf('i.imgur') >= 0) {
 			console.log(link + ' is not i'); 
 			var newLink = link.slice(7);
-			$('section').children().hide();
-			$('section').append('<img src="https://i.' + newLink + '.jpg">');
-			$('section').append('<p id="restart"> next </p>');
+			$('section').append('<img id="img" src="https://i.' + newLink + '.jpg">');
 			
 			} 
+
+		$('section').children(':not("#img")').hide();
+
 		} /* ------ end wallpaper build ------ */
 
-	/* ------ start video build ------ */
+		/* ------ start video build ------ */
 		else if ( $('#choice-video').css('display') === 'inline') {
 			// video output  
 			console.log("video true");
@@ -126,6 +128,22 @@ app.generateContent = function(link, requestedSize, size) {
 			console.log(vid+link+'"/></video>'); 
 			$('section').append("err" + vid + link + '"/></video>');
 			$('video, audio').mediaelementplayer();
-	}
+		}
+
+		
+		$('#restart').toggle().on('click', function() {
+		$('section').children().show(); 
+		$('video').detach();
+		$('#img').detach();
+		$(this).toggle();
+
+	});
 
 }
+
+
+
+
+
+
+

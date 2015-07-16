@@ -10,7 +10,8 @@ body {
   body .choices,
   body #choice-wallpaper,
   body #choice-video,
-  body #wallpaper-advanced {
+  body #wallpaper-advanced,
+  body #restart {
     display: none; }
   body span #advanced {
     background-color: #5EF7BD;

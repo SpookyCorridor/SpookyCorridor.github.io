@@ -16,7 +16,8 @@ body {
 	.choices,
 	#choice-wallpaper,
 	#choice-video,
-	#wallpaper-advanced
+	#wallpaper-advanced,
+	#restart
 	{
 		display: none; 
 	}
@@ -210,6 +211,7 @@ section {
 		margin: 0 auto;
 
 		}
+
 	}
 
 	nav {
