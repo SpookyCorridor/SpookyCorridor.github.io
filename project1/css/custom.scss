@@ -84,6 +84,7 @@ section {
 	input[type="text"] {
 		background-color: rgba(255,255,255,.0);
 		border-style: none;
+		color: pink;
 		border-bottom: 2px solid $secondary-color;
 		appearance:none;
 		width: 75px;
@@ -119,8 +120,9 @@ section {
 	}
 
 	img {
-		max-width: 500px;
-		max-height: 500px;
+		//fluid images always 
+		max-width: 260px;
+		height: auto;
 		margin: 0 auto;
 
 	}
@@ -138,6 +140,14 @@ section {
 
 		input[type="text"] {
 			width: 165px;
+		}
+
+		img {
+		//fluid images always 
+		max-width: 500px;
+		height: auto;
+		margin: 0 auto;
+
 		}
 
 	}
@@ -189,6 +199,15 @@ section {
 
 		input[type="text"] {
 		width: 165px;
+		text-align: center;
+		}
+
+		img {
+		//fluid images always 
+		max-width: 800px;
+		height: auto;
+		margin: 0 auto;
+
 		}
 	}
 

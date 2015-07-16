@@ -3,13 +3,14 @@ $(document).ready(function() {
 	console.log("Resources loaded");
 
 	// contact submit event handler
-	$('#form-send').on('click', function() {	
+	$('.form-send').on('click', function() {	
 		//clear old queries 
 		$('img').detach(); 
-		$('video').detach(); 
-		//build new reddit query 
-		app.buildQuery();
+		$('video').detach();
+		//build new reddit search query 
 		console.log('Clicked form submit..');
+		app.buildQuery();
+		
 	}); 
 	// expand options for wallpaper or video 
 	$('span>a').on('click', function() {
@@ -26,7 +27,8 @@ $(document).ready(function() {
 	}); // end span click 
 
 	$('#advanced').on('click', function() {
-		$(this).siblings('#form-send').appendTo('#wallpaper-advanced');
+		// show advanced options 
+		$(this).siblings('.form-send').appendTo('#wallpaper-advanced');
 		$(this).fadeOut();
 		$('#wallpaper-advanced').fadeIn().append('');
 
@@ -71,20 +73,27 @@ app.generateContent = function(link) {
 		//working direct link 
 		if ( link.indexOf('i.imgur') >= 0 ) {
 			console.log(link + ' is i'); 
+			$('section').children().hide();
 			$('section').append('<img src="' + link + '">');
+
+			
 		} // fix link path to i.imgur instead of imgur
 		  // and append img extention 
 		else if (!link.indexOf('i.imgur') >= 0) {
 			console.log(link + ' is not i'); 
 			var newLink = link.slice(7);
+			$('section').children().hide();
 			$('section').append('<img src="https://i.' + newLink + '.jpg">');
-			console.log(newLink + ' !!!'); 
+			$('section').append('<p id="restart"> next </p>');
+			
 		} 
 		} /* ------ end wallpaper build ------ */
+
 	/* ------ start video build ------ */
-		else if ( $('#choice-video').css('display' === 'inline') ) {
+		else if ( $('#choice-video').css('display') === 'inline') {
 			// video output  
-			$('section').append('<video src="' + link + '">');
+			console.log("video true");
+			$('section').append('<video src="' + link + '">' + '</video>');
 	}
 
 }
