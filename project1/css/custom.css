@@ -1,11 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800,400|Alegreya|Varela+Round|Arvo);
+html {
+  font-size: 16px; }
+
 body {
   background-color: #AC9DE0;
   font-family: 'Alegreya', serif; }
-  body h1 {
-    display: inline;
-    font-family: 'Varela Round', sans-serif;
-    color: #5EF7BD; }
   body a {
     text-decoration: none;
     color: pink; }
@@ -15,38 +14,37 @@ body {
     display: none; }
   body span #advanced {
     background-color: #5EF7BD;
-    font-size: 3rem;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    padding: 0;
     color: pink;
-    transition: border .5s, color .5s; }
+    transition: border .5s, color .5s;
+    width: 45px;
+    height: 45px;
+    font-size: 1.7rem; }
   body span #advanced:hover {
     border: 1px solid pink;
     color: #474F4B; }
 
+nav h1 {
+  color: #5EF7BD;
+  font-size: 4rem;
+  text-align: center;
+  display: inline-block; }
 nav ul {
-  list-style: none;
-  display: inline-block;
-  font-size: 1rem;
-  color: #474F4B; }
+  display: inline;
+  position: relative; }
 nav li {
-  display: inline-block;
-  margin: 0 10px; }
+  display: inline;
+  font-size: 1rem;
+  margin: 0 15px; }
+nav li.nav {
+  display: none; }
 
 section {
   color: #FFFF31;
-  width: 80%;
+  width: 90%;
   font-family: "Arvo";
-  font-size: 5rem;
-  font-weight: 800;
-  padding: 1em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%); }
+  font-size: 1.5rem;
+  font-weight: 800; }
   section select {
     background-color: #AC9DE0;
     -webkit-appearance: none; }
@@ -55,7 +53,7 @@ section {
     border-style: none;
     border-bottom: 2px solid #FFFF31;
     appearance: none;
-    max-width: 250px; }
+    width: 75px; }
   section input[type="number"] {
     background-color: rgba(255, 255, 255, 0);
     border-style: none;
@@ -63,10 +61,10 @@ section {
     text-align: center; }
   section input[type="submit"] {
     background-color: #5EF7BD;
-    font-size: 3rem;
+    font-size: 1.7rem;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     padding: 0;
     color: pink;
     transition: border .5s, color .5s; }

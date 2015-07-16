@@ -80,9 +80,9 @@ app.generateContent = function(link) {
 			$('section').append('<img src="https://i.' + newLink + '.jpg">');
 			console.log(newLink + ' !!!'); 
 		} 
-		}); /* ------ end wallpaper build ------ */
+		} /* ------ end wallpaper build ------ */
 	/* ------ start video build ------ */
-		else if ( $('#choice-video').css('display' === 'inline') {
+		else if ( $('#choice-video').css('display' === 'inline') ) {
 			// video output  
 			$('section').append('<video src="' + link + '">');
 	}

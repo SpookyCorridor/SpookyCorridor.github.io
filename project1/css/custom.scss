@@ -1,15 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800,400|Alegreya|Varela+Round|Arvo);
 @import 'variables.scss'; 
 
+html {
+	font-size: 16px;
+}
 body {
 	background-color: $primary-color;
 	font-family: 'Alegreya', serif;
-
-	h1 {
-		display: inline; 
-		font-family: 'Varela Round', sans-serif; 
-		color: $logo-color;
-	}
+	
 
 	a {
 		text-decoration: none;
@@ -24,16 +22,15 @@ body {
 	}
 
 	span {
-		
+
 		#advanced {
 			background-color: $logo-color;
-			font-size: 3rem;
-			border-radius: 50%; 
-			width: 60px;
-			height: 60px;
-			padding: 0;
+			border-radius: 50%;
 			color: pink;
 			transition: border .5s, color .5s;
+			width: 45px;
+			height: 45px;
+			font-size: 1.7rem;
 		}
 
 		#advanced:hover {
@@ -45,35 +42,40 @@ body {
 }
 
 nav {
+	h1 {
+		color: $logo-color;
+		font-size: 4rem;
+		text-align: center;
+		display: inline-block;
+	}
 
 	ul {
-		list-style: none;
-		display: inline-block;
-		font-size: $nav-phone;
-		color: $nav-color;	
+		display: inline;
+		position: relative;
 	}
 
 	li {
-		display: inline-block;
-		margin: 0 10px;
+		display: inline;
+		font-size: 1rem;
+		margin: 0 15px;
 	}
 
+	li.nav {
+		display: none;
+	}
 }
+
+
 
 
 section {
 
 	color: $secondary-color;
-	width: 80%;
+	width: 90%;	
 	font-family: "Arvo";
-    font-size: $section-laptop;
+    font-size: $section-phone;
     font-weight:800; 
-    padding: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+  
 
     select {
     	background-color: $primary-color;
@@ -85,7 +87,7 @@ section {
 		border-style: none;
 		border-bottom: 2px solid $secondary-color;
 		appearance:none;
-		max-width: 250px;
+		width: 75px;
 	}
 	input[type="number"] {
 		background-color: rgba(255,255,255,.0);
@@ -93,15 +95,13 @@ section {
 		border-bottom: 2px solid $secondary-color;
 		text-align: center;
 	}
-	input[type="month"] {
 
-	}
 	input[type="submit"] {
 		background-color: $logo-color;
-		font-size: 3rem;
+		font-size: 1.7rem;
 		border-radius: 50%; 
-		width: 60px;
-		height: 60px;
+		width: 45px;
+		height: 45px;
 		padding: 0;
 		color: pink;
 		transition: border .5s, color .5s;
