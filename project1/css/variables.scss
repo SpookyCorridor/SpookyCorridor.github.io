@@ -3,8 +3,16 @@ $primary-color: #AC9DE0;
 $secondary-color: #FFFF31; 
 $nav-color: #474F4B;
 $logo-color: #5EF7BD; 
+$transparent: rgba(255,255,255,.0); 
 //mobile-first breakpoints 
 $break-phone: 320px; 
 $break-tablet: 720px; 
 $break-laptop: 960px;
-$break-desktop: 1280px;  
+$break-desktop: 1280px; 
+//font sizes
+$section-phone: 2.5rem;
+$section-tablet: 4.5rem;
+$section-laptop: 5rem; 
+$nav-phone: 1rem; 
+$nav-tablet: 2.5rem; 
+$nav-laptop: 3rem; 

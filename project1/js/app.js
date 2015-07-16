@@ -4,7 +4,10 @@ $(document).ready(function() {
 
 	// contact submit event handler
 	$('#form-send').on('click', function() {	
+		//clear old queries 
 		$('img').detach(); 
+		$('video').detach(); 
+		//build new reddit query 
 		app.buildQuery();
 		console.log('Clicked form submit..');
 	}); 
@@ -76,9 +79,12 @@ app.generateContent = function(link) {
 			var newLink = link.slice(7);
 			$('section').append('<img src="https://i.' + newLink + '.jpg">');
 			console.log(newLink + ' !!!'); 
-		} else if ( $('#choice-video').css('display' === 'inline') {
-			// video output 
-		});
+		} 
+		}); /* ------ end wallpaper build ------ */
+	/* ------ start video build ------ */
+		else if ( $('#choice-video').css('display' === 'inline') {
+			// video output  
+			$('section').append('<video src="' + link + '">');
 	}
 
 }

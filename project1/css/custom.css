@@ -9,10 +9,8 @@ body {
   body a {
     text-decoration: none;
     color: pink; }
-  body #choice-wallpaper {
-    display: none; }
-  body #choice-video {
-    display: none; }
+  body #choice-wallpaper,
+  body #choice-video,
   body #wallpaper-advanced {
     display: none; }
   body span #advanced {
@@ -31,7 +29,7 @@ body {
 nav ul {
   list-style: none;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #474F4B; }
 nav li {
   display: inline-block;
@@ -39,6 +37,7 @@ nav li {
 
 section {
   color: #FFFF31;
+  width: 80%;
   font-family: "Arvo";
   font-size: 5rem;
   font-weight: 800;
