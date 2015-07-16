@@ -61,12 +61,12 @@ app.buildQuery = function(data) {
 	var time = data.searchTime; 
 
 	//add width and height reqs 
-	
-	var size = [data.height, data.width]; 
+	 
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
 	tags + '&restrict_sr=' + sub + '&t=' + time + '&limit=100';
 	$.getJSON(searchQuery, function(data) {
-      	return app.generateContent(data.data.children[num].data.url, size);
+      	return app.generateContent(data.data.children[num].data.url, [data.data.children[num].data.preview.images[0].source.width,
+				data.data.children[num].data.preview.images[0].source.height]);
 });
 }
 
