@@ -55,36 +55,48 @@ app.createFormObject = function() {
 //get JSON with user defined query  
 app.buildQuery = function(data) {
 	data = app.createFormObject();
-	var num = Math.floor(Math.random() * 100 + 1); //random indice
+	var a; 
+	// namespace to app.num later to try 
+	var num = Math.floor(Math.random() * 100); //random indice
 	var sub = data.searchSubr;
 	var tags = data.searchTerms; 
-	var time = data.searchTime; 
-
+	var time = data.searchTime;
 	//add width and height reqs 
-	var reqestedSize = [parseInt(data.searchWidth), parseInt(data.searchHeight)];
+	var requestedSize = [parseInt(data.searchWidth), parseInt(data.searchHeight)];
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
 	tags + '&restrict_sr=' + sub + '&t=' + time + '&limit=100';
 	$.getJSON(searchQuery, function(data) {
-      	return app.generateContent(data.data.children[num].data.url,
-      			reqestedSize,
-      			//grab image dimensions 
-      		   [data.data.children[num].data.preview.images[0].source.width,
-				data.data.children[num].data.preview.images[0].source.height]);
-});
+		var size = [data.data.children[num].data.preview.images[0].source.width,
+					data.data.children[num].data.preview.images[0].source.height];		 
+		do {
+			
+			num = Math.floor(Math.random() * 100);
+		a =	app.generateContent(data.data.children[num].data.url,
+			requestedSize,
+			//grab image dimensions 
+		   [data.data.children[num].data.preview.images[0].source.width,
+		data.data.children[num].data.preview.images[0].source.height]);
+		size = [data.data.children[num].data.preview.images[0].source.width,
+				data.data.children[num].data.preview.images[0].source.height];
+		} while ((requestedSize[0] > size[0] || requestedSize[1] > size[1]));
+			return a;
+      		
+	});
 }
 
 
 app.generateContent = function(link, requestedSize, size) {
 	
-	console.log(size);
+	console.log(requestedSize, size);
 	/* ----- start wallpaper build ------ */ 
 	if ( $('#choice-wallpaper').css('display') === 'inline') {
-		
+			
 		
 		// TODO: 
 		// check for min width and height and 
 		// provide link under responsive image
 		
+
 		//working direct link 
 		if ( link.indexOf('i.imgur') >= 0 ) {
 			console.log(link + ' is i'); 
