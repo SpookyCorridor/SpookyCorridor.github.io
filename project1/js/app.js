@@ -7,6 +7,7 @@ $(document).ready(function() {
 		//clear old queries 
 		$('img').detach(); 
 		$('video').detach();
+		$('div:not(".container")').detach();
 		//build new reddit search query 
 		console.log('Clicked form submit..');
 		app.buildQuery();
@@ -22,6 +23,8 @@ $(document).ready(function() {
 
 		} else if (choice == 'video') {
 			$('.choices').prop('id', 'choice-video').fadeIn();
+			$('#advanced').hide();
+			$('')
 		}
 		
 	}); // end span click 
@@ -69,18 +72,25 @@ app.buildQuery = function(data) {
 	$.getJSON(searchQuery, function(data) {
 		var size = [data.data.children[num].data.preview.images[0].source.width,
 					data.data.children[num].data.preview.images[0].source.height];		 
-		do {
+		if ($('#choice-wallpaper').length) {
+			do {
 			
-			num = Math.floor(Math.random() * 100);
-		a =	app.generateContent(data.data.children[num].data.url,
-			requestedSize,
-			//grab image dimensions 
-		   [data.data.children[num].data.preview.images[0].source.width,
-		data.data.children[num].data.preview.images[0].source.height]);
-		size = [data.data.children[num].data.preview.images[0].source.width,
-				data.data.children[num].data.preview.images[0].source.height];
-		} while ((requestedSize[0] > size[0] || requestedSize[1] > size[1]));
-			
+				num = Math.floor(Math.random() * 100);
+			a =	app.generateContent(data.data.children[num].data.url,
+				requestedSize,
+				//grab image dimensions 
+			   [data.data.children[num].data.preview.images[0].source.width,
+			data.data.children[num].data.preview.images[0].source.height]);
+			size = [data.data.children[num].data.preview.images[0].source.width,
+					data.data.children[num].data.preview.images[0].source.height];
+			} while ((requestedSize[0] > size[0] || requestedSize[1] > size[1]));
+		}
+			a = a =	app.generateContent(data.data.children[num].data.url,
+				requestedSize,
+				//grab image dimensions 
+			   [data.data.children[num].data.preview.images[0].source.width,
+			data.data.children[num].data.preview.images[0].source.height]);
+
 			return a;
       		
 	});
@@ -115,6 +125,7 @@ app.generateContent = function(link, requestedSize, size) {
 			} 
 
 		$('section').children(':not("#img")').hide();
+		$('#restart').show(); // allow user to do new
 
 		} /* ------ end wallpaper build ------ */
 
@@ -126,15 +137,20 @@ app.generateContent = function(link, requestedSize, size) {
 
 			var vid = '<video width="540" height="260" id="player1" autoplayer="true" preload="auto"> <source type="video/youtube" src="';
 			console.log(vid+link+'"/></video>'); 
-			$('section').append("err" + vid + link + '"/></video>');
+			$('section').append(vid + link + '"/></video>');
 			$('video, audio').mediaelementplayer();
+			$('section>span').hide();
+			$('#restart').show(); // allow user to do new
 		}
 
 		
-		$('#restart').toggle().on('click', function() {
-		$('section').children().show(); 
-		$('video').detach();
-		$('#img').detach();
+		$('#restart').on('click', function() {
+			$('section').children(':not("span#wallpaper-advanced")').show();
+			$('#advanced').show();
+			$('.form-send').show();
+			$('div:not(".container")').detach();
+			$('video').detach(); 
+			$('#img').detach();
 		$(this).toggle();
 
 	});
