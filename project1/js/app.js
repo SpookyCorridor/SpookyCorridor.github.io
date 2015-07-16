@@ -21,7 +21,7 @@ $(document).ready(function() {
 			$('.choices').prop('id', 'choice-wallpaper').fadeIn();
 
 		} else if (choice == 'video') {
-			$('.choices').prop('id', 'choice-wallpaper').fadeIn();
+			$('.choices').prop('id', 'choice-video').fadeIn();
 		}
 		
 	}); // end span click 
@@ -86,14 +86,16 @@ app.generateContent = function(link) {
 			$('section').append('<img src="https://i.' + newLink + '.jpg">');
 			$('section').append('<p id="restart"> next </p>');
 			
-		} 
+			} 
 		} /* ------ end wallpaper build ------ */
 
 	/* ------ start video build ------ */
 		else if ( $('#choice-video').css('display') === 'inline') {
 			// video output  
 			console.log("video true");
-			$('section').append('<video src="' + link + '">' + '</video>');
+			var vid = '<iframe width="420" height="345" src="';
+			console.log(vid+link+'&html5=true'); 
+			$('section').append(vid + link + '"></iframe>');
 	}
 
 }
