@@ -46,7 +46,8 @@ app.createFormObject = function() {
 	retJson.searchSort = $('#search-sort').val(); 
 	retJson.searchTime = $('#search-time').val();
 	retJson.searchSource = $('#search-source').val();
-	retJson.searchUsername = $('#search-username').val();
+	retJson.searchWidth = $('#search-width').val();
+	retJson.searchHeight = $('#search-height').val();
 
 	return retJson; 
 }
@@ -58,18 +59,28 @@ app.buildQuery = function(data) {
 	var sub = data.searchSubr;
 	var tags = data.searchTerms; 
 	var time = data.searchTime; 
+
+	//add width and height reqs 
+	
+	var size = [data.height, data.width]; 
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
 	tags + '&restrict_sr=' + sub + '&t=' + time + '&limit=100';
 	$.getJSON(searchQuery, function(data) {
-      	return app.generateContent(data.data.children[num].data.url);
+      	return app.generateContent(data.data.children[num].data.url, size);
 });
 }
 
 
-app.generateContent = function(link) {
-	
+app.generateContent = function(link, size) {
+	console.log(size);
 	/* ----- start wallpaper build ------ */ 
 	if ( $('#choice-wallpaper').css('display') === 'inline') {
+		
+
+		// TODO: 
+		// check for min width and height and 
+		// provide link under responsive image
+
 		//working direct link 
 		if ( link.indexOf('i.imgur') >= 0 ) {
 			console.log(link + ' is i'); 
@@ -93,9 +104,12 @@ app.generateContent = function(link) {
 		else if ( $('#choice-video').css('display') === 'inline') {
 			// video output  
 			console.log("video true");
-			var vid = '<iframe width="420" height="345" src="';
-			console.log(vid+link+'&html5=true'); 
-			$('section').append(vid + link + '"></iframe>');
+
+
+			var vid = '<video width="540" height="260" id="player1" autoplayer="true" preload="auto"> <source type="video/youtube" src="';
+			console.log(vid+link+'"/></video>'); 
+			$('section').append("err" + vid + link + '"/></video>');
+			$('video, audio').mediaelementplayer();
 	}
 
 }
