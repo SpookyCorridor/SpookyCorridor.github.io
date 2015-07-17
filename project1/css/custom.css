@@ -7,6 +7,8 @@ body {
   body a {
     text-decoration: none;
     color: pink; }
+  body a:hover {
+    color: #FFFF31; }
   body .choices,
   body #choice-wallpaper,
   body #choice-video,
@@ -24,21 +26,27 @@ body {
   body span #advanced:hover {
     border: 1px solid pink;
     color: #474F4B; }
+  body header {
+    margin-top: 15px; }
 
-nav h1 {
-  color: #5EF7BD;
-  font-size: 4rem;
-  text-align: center;
-  display: inline-block; }
-nav ul {
-  display: inline;
-  position: relative; }
-nav li {
-  display: inline;
-  font-size: 1rem;
-  margin: 0 15px; }
-nav li.nav {
-  display: none; }
+nav {
+  text-align: center; }
+  nav h1 {
+    color: #5EF7BD;
+    font-size: 4rem;
+    text-align: center;
+    display: inline-block; }
+  nav ul {
+    display: inline;
+    position: relative; }
+  nav li {
+    display: inline;
+    font-size: 1rem;
+    margin: 0 15px; }
+  nav li.nav {
+    display: none; }
+  nav a {
+    color: #474F4B; }
 
 section {
   color: #FFFF31;
@@ -100,7 +108,7 @@ section {
     text-align: center; }
     nav h1 {
       color: #5EF7BD;
-      font-size: 6rem;
+      font-size: 7rem;
       text-align: center;
       display: inline-block; }
     nav ul {
@@ -136,7 +144,7 @@ section {
     text-align: center; }
     nav h1 {
       color: #5EF7BD;
-      font-size: 6rem;
+      font-size: 7rem;
       text-align: center;
       display: inline-block; }
     nav ul {

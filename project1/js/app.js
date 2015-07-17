@@ -67,8 +67,14 @@ app.buildQuery = function(data) {
 	var time = data.searchTime;
 	//add width and height reqs 
 	var requestedSize = [parseInt(data.searchWidth), parseInt(data.searchHeight)];
+	if ($('#choice-video').length) {
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
-	tags + '&restrict_sr=' + sub + '&t=' + time + '&limit=100';
+	tags + /*begin*/ '+site%3Ayoutube+url%3Ayoutube+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
+	} else {
+		var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
+	tags + /*begin*/ '+url%3Aimgur+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
+	}
+	console.log(searchQuery);
 	$.getJSON(searchQuery, function(data) {
 		var size = [data.data.children[num].data.preview.images[0].source.width,
 					data.data.children[num].data.preview.images[0].source.height];		 

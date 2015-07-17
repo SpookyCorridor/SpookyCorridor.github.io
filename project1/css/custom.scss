@@ -12,6 +12,10 @@ body {
 		text-decoration: none;
 		color: pink;
 	}
+
+	a:hover {
+		color: $secondary-color;
+	}
 	
 	.choices,
 	#choice-wallpaper,
@@ -40,9 +44,14 @@ body {
    		 }
 
 	}
+
+	header {
+		margin-top: 15px;
+	}
 }
 
 nav {
+	text-align: center;
 	h1 {
 		color: $logo-color;
 		font-size: 4rem;
@@ -63,6 +72,10 @@ nav {
 
 	li.nav {
 		display: none;
+	}
+
+	a {
+		color: $nav-color;
 	}
 }
 
@@ -160,7 +173,7 @@ section {
 
 		h1 {
 			color: $logo-color;
-			font-size: 6rem;
+			font-size: 7rem;
 			text-align: center;
 			display: inline-block;
 		}
@@ -220,7 +233,7 @@ section {
 
 		h1 {
 			color: $logo-color;
-			font-size: 6rem;
+			font-size: 7rem;
 			text-align: center;
 			display: inline-block;
 		}
