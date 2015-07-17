@@ -190,6 +190,8 @@ section {
       font-size: 11rem; }
     section .fa-3x {
       font-size: 11rem; }
+    section #source {
+      display: block; }
 
   nav {
     text-align: center; }

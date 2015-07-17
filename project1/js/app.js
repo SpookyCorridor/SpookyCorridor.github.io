@@ -138,6 +138,7 @@ app.generateContent = function(link, requestedSize, size) {
 		$('section').children(':not("#img")').hide();
 		$('#restart').show(); // allow user to do new
 
+		$('section').append('<a id="source" href="' + link + '">Source</a>');
 		} /* ------ end wallpaper build ------ */
 
 		/* ------ start video build ------ */
@@ -152,6 +153,7 @@ app.generateContent = function(link, requestedSize, size) {
 			$('video, audio').mediaelementplayer();
 			$('section>span').hide();
 			$('#restart').show(); // allow user to do new
+			$('section').append('<a id="source" href="' + link + '">Source</a>');
 		}
 
 		
@@ -162,10 +164,10 @@ app.generateContent = function(link, requestedSize, size) {
 			$('div:not(".container")').detach();
 			$('video').detach(); 
 			$('#img').detach();
+			$('#source').detach(); 
 		$(this).toggle();
-
+ 
 	});
-
 }
 
 
