@@ -7,12 +7,14 @@ $(document).ready(function() {
   $('.success').hide();
   $('.error').hide();
 
+
   // contact submit event handler
   $('#form_send').on('click', function() {
     var formdata = app.createFormObject();
     console.log(formdata);
     console.log('Clicked form submit...');
     app.sendEmail(formdata);
+    return false; 
 
   });
 
