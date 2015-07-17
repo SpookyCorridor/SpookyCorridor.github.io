@@ -9,12 +9,13 @@ $(document).ready(function() {
 
 
   // contact submit event handler
+
   $('#form_send').on('click', function() {
+    document.getElementById("formID").submit();
     var formdata = app.createFormObject();
     console.log(formdata);
     console.log('Clicked form submit...');
     app.sendEmail(formdata);
-    return false; 
 
   });
 
