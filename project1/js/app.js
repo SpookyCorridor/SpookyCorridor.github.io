@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	console.log("Resources loaded");
 
-	$('#nav-bars').on('click', function() {
+	$('#nav-bars').on('click', function() { 
 		$('.nav').toggle();
 	})
 	// contact submit event handler

@@ -95,7 +95,8 @@ section {
   section em {
     color: pink; }
   section .about {
-    font-size: 1rem; }
+    font-size: 1.5rem;
+    margin: 0 auto; }
   section #contact-links {
     margin-top: 15%; }
   section #contact-links li {
@@ -121,7 +122,8 @@ section {
       height: auto;
       margin: 0 auto; }
     section .about {
-      font-size: 3rem; }
+      font-size: 3rem;
+      margin: 0 auto; }
     section #contact-links {
       margin-top: 10%; }
     section #contact-links ul {
@@ -173,6 +175,8 @@ section {
       max-width: 800px;
       height: auto;
       margin: 0 auto; }
+    section .about {
+      font-size: 4rem; }
     section #contact-links {
       margin-top: 10%; }
     section #contact-links ul {
