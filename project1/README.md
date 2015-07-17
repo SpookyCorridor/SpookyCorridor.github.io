@@ -1,8 +1,10 @@
 #[Crumblr](http://spookycorridor.github.io/project1/)
 
 ![Crumblr Home](http://i.imgur.com/dNByQdc.png?2 "Crumblr Home")
+
 <br>
-Crumblr uses Reddit's powerful search tools in the form of plain english. 
+Crumblr uses Reddit's powerful search tools in the form of plain english.
+
 Currently it allows you to search for a wallpaper or youtube video. 
 
 ### Version 1.0 
