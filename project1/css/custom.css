@@ -46,7 +46,8 @@ nav {
     font-size: 1rem;
     margin: 0 15px; }
   nav li.nav {
-    display: none; }
+    display: none;
+    font-size: 1.7rem; }
   nav a {
     color: #474F4B; }
 

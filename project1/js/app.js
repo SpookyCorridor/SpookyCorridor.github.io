@@ -2,6 +2,9 @@ $(document).ready(function() {
 
 	console.log("Resources loaded");
 
+	$('#nav-bars').on('click', function() {
+		$('.nav').toggle();
+	})
 	// contact submit event handler
 	$('.form-send').on('click', function() {	
 		//clear old queries 
