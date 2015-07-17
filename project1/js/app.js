@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-	console.log("Resources loaded");
-
 	$('#nav-bars').on('click', function() { 
 		$('.nav').toggle();
 	})
@@ -12,14 +10,14 @@ $(document).ready(function() {
 		$('video').detach();
 		$('div:not(".container")').detach();
 		//build new reddit search query 
-		console.log('Clicked form submit..');
+		//console.log('Clicked form submit..');
 		app.buildQuery();
 		
 	}); 
 	// expand options for wallpaper or video 
 	$('span>a').on('click', function() {
 		var choice = $(this).html().trim();
-		console.log(choice);
+		//console.log(choice);
 		$(this).parent().text(choice);
 		if (choice == 'wallpaper') {
 			$('.choices').prop('id', 'choice-wallpaper').fadeIn();
@@ -110,26 +108,20 @@ app.buildQuery = function(data) {
 
 app.generateContent = function(link, requestedSize, size) {
 	
-	console.log(requestedSize, size);
+	//console.log(requestedSize, size);
 	/* ----- start wallpaper build ------ */ 
 	if ( $('#choice-wallpaper').css('display') === 'inline') {
-			
 		
-		// TODO: 
-		// check for min width and height and 
-		// provide link under responsive image
-		
-
 		//working direct link 
 		if ( link.indexOf('i.imgur') >= 0 ) {
-			console.log(link + ' is i'); 
+			//console.log(link + ' is i'); 
 			$('section').append('<img id= "img" src="' + link + '">');
 
 			
 		} // fix link path to i.imgur instead of imgur
 		  // and append img extention 
 		else if (!link.indexOf('i.imgur') >= 0) {
-			console.log(link + ' is not i'); 
+			//console.log(link + ' is not i'); 
 			var newLink = link.slice(7);
 			$('section').append('<img id="img" src="https://i.' + newLink + '.jpg">');
 			
@@ -144,11 +136,11 @@ app.generateContent = function(link, requestedSize, size) {
 		/* ------ start video build ------ */
 		else if ( $('#choice-video').css('display') === 'inline') {
 			// video output  
-			console.log("video true");
+			//console.log("video true");
 
 
 			var vid = '<video width="540" height="260" id="player1" autoplayer="true" preload="auto"> <source type="video/youtube" src="';
-			console.log(vid+link+'"/></video>'); 
+			//console.log(vid+link+'"/></video>'); 
 			$('section').append(vid + link + '"/></video>');
 			$('video, audio').mediaelementplayer();
 			$('section>span').hide();
