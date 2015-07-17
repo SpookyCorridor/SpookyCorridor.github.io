@@ -66,7 +66,7 @@ app.buildQuery = function(data) {
 	data = app.createFormObject();
 	var a; // for generateContent to return after loop
 	// namespace to app.num later to try 
-	var num = Math.floor(Math.random() * 100); //random indice
+	var num = Math.floor(Math.random() * 200); //random indice
 	var sub = data.searchSubr;
 	var tags = data.searchTerms; 
 	var time = data.searchTime;
@@ -75,11 +75,11 @@ app.buildQuery = function(data) {
 	if ($('#choice-video').length) { 
 	//get only youtube links for better compatability
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
-	tags + /*begin*/ '+site%3Ayoutube+url%3Ayoutube+is_self%3Ano+self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
+	tags + /*begin*/ '+site%3Ayoutube+url%3Ayoutube+is_self%3Ano+self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=200';
 	} else {
 		// get only imgur links for better compatability
 		var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
-		tags + /*begin*/ '+url%3Aimgur+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
+		tags + /*begin*/ '+url%3Aimgur+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=200';
 	}
 	console.log(searchQuery);
 	$.getJSON(searchQuery, function(data) {
