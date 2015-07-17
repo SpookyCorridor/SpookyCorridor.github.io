@@ -2,7 +2,10 @@ $(document).ready(function() {
 
 	$('#nav-bars').on('click', function() { 
 		$('.nav').toggle();
+		$('#nav-bars .fa-bars').toggleClass('fa-rotate-90');
 	})
+
+
 	// contact submit event handler
 	$('.form-send').on('click', function() {	
 		//clear old queries 
@@ -71,7 +74,7 @@ app.buildQuery = function(data) {
 	if ($('#choice-video').length) { 
 	//get only youtube links for better compatability
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
-	tags + /*begin*/ '+site%3Ayoutube+url%3Ayoutube+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
+	tags + /*begin*/ '+site%3Ayoutube+url%3Ayoutube+is_self%3Ano+self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
 	} else {
 		// get only imgur links for better compatability
 		var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
