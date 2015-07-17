@@ -16,6 +16,10 @@ body {
 	a:hover {
 		color: $secondary-color;
 	}
+
+	ul {
+		list-style-type: none;
+	}
 	
 	.choices,
 	#choice-wallpaper,
@@ -49,6 +53,7 @@ body {
 		margin-top: 15px;
 	}
 }
+
 
 nav {
 	text-align: center;
@@ -142,14 +147,44 @@ section {
 
 	}
 
+	em {
+		color: pink;
+	}
+
+	.about {
+		font-size: 1rem;
+	}
+
+	#contact-links {
+		margin-top: 15%;
+	}
+
+	#contact-links li {
+		margin-top: 20px;
+	}
+
+
+	.fa {	
+		color: $nav-color;
+	}
+
+	.fa-2x {
+		font-size: 5rem;
+	}
+
+	.fa-3x {
+		font-size: 5rem;
+	}
+
 }
 
 @media only screen and (min-width: $break-phone + 1) and (max-width: $break-tablet) {
 		
+
 	section {
 		margin: 0 auto;
 		text-align: center;
-		width: 85%;
+		width: 90%;
 		padding: 20px;
 		font-size: 4.5rem;
 
@@ -165,9 +200,38 @@ section {
 
 		}
 
+		.about {
+			font-size: 3rem;
+		}
+
+		#contact-links {
+			margin-top: 10%;
+		}
+		
+		#contact-links ul {
+			display: inline;
+		}
+
+		#contact-links li {
+			margin: 60px 0 0 0;
+		}
+
+		.fa {	
+			color: $nav-color;
+		}
+
+		.fa-2x {
+			font-size: 11rem;
+		}
+
+		.fa-3x {
+			font-size: 11rem;
+		}
+
 	}
 
 	nav {
+
 
 		text-align: center;
 
@@ -198,6 +262,9 @@ section {
 		}
 	}	
 
+	.fa-4x {
+			font-size: 2rem;
+		}
 }
 
 @media only screen and (min-width: $break-tablet + 1) and (max-width: $break-desktop) {
@@ -223,6 +290,31 @@ section {
 		height: auto;
 		margin: 0 auto;
 
+		}
+
+		#contact-links {
+			margin-top: 10%;
+		}
+		
+		#contact-links ul {
+			display: inline;
+		}
+
+		#contact-links li {
+			margin: 60px 30px 0 30px;
+			display: inline;
+		}
+
+		.fa {	
+			color: $nav-color;
+		}
+
+		.fa-2x {
+			font-size: 11rem;
+		}
+
+		.fa-3x {
+			font-size: 11rem;
 		}
 
 	}

@@ -67,12 +67,14 @@ app.buildQuery = function(data) {
 	var time = data.searchTime;
 	//add width and height reqs 
 	var requestedSize = [parseInt(data.searchWidth), parseInt(data.searchHeight)];
-	if ($('#choice-video').length) {
+	if ($('#choice-video').length) { 
+	//get only youtube links for better compatability
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
 	tags + /*begin*/ '+site%3Ayoutube+url%3Ayoutube+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
 	} else {
+		// get only imgur links for better compatability
 		var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
-	tags + /*begin*/ '+url%3Aimgur+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
+		tags + /*begin*/ '+url%3Aimgur+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=100';
 	}
 	console.log(searchQuery);
 	$.getJSON(searchQuery, function(data) {
