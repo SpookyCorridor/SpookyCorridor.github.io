@@ -31,7 +31,7 @@ __`rising`__ is the sort
 __`week`__ is the time (how far back in time to look)
 
 
-<br>__advanced options:__
+![Advanced button]( http://i.imgur.com/flFAPmm.png?5 "Advanced button") __advanced options:__
 
 ![Wallpaper Query Advanced](http://i.imgur.com/qSGxxuN.png?1 "Wallpaper Advanced Query")
 
@@ -60,6 +60,7 @@ __`month`__ is the time (how far back in time to look)
 - HTML5
 - CSS3
 - Skeleton
+- font-awesome 
 - jQuery
 - MediaElement.js 
 

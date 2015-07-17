@@ -9,6 +9,7 @@ $(document).ready(function() {
 	// contact submit event handler
 	$('.form-send').on('click', function() {	
 		//clear old queries 
+		$('.form-send').submit();
 		$('img').detach(); 
 		$('video').detach();
 		$('div:not(".container")').detach();
