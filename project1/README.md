@@ -26,10 +26,12 @@ a crumblr query looks a little something like this:
 ![Wallpaper Query](http://i.imgur.com/qH2o1nh.png?2 "Wallpaper Query") 
 
 <br>
-__`cats`__ is the tag. You can add multiple tags with a +  __`"funny+cats"`__ 
+__`cats`__ is the tag. 
 __`pics`__ is the subreddit
 __`rising`__ is the sort
 __`week`__ is the time (how far back in time to look)
+
+> you can add multiple tags with a +  __`"funny+cats"`__ 
 
 
 ![Advanced button]( http://i.imgur.com/flFAPmm.png?5 "Advanced button") __advanced options:__
