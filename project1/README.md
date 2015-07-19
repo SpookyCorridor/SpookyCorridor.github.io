@@ -31,7 +31,7 @@ __`pics`__ is the subreddit
 __`rising`__ is the sort
 __`week`__ is the time (how far back in time to look)
 
-> you can add multiple tags with a +  __`"funny+cats"`__ 
+> you can add multiple tags with a +  __`funny+cats`__ 
 
 
 ![Advanced button]( http://i.imgur.com/flFAPmm.png?5 "Advanced button") __advanced options:__
