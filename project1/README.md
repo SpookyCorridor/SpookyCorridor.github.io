@@ -10,6 +10,12 @@ Currently it allows you to search for a wallpaper or youtube video.
 ### Version 1.0 
 This was a project for WDI at General Assembly during project week. 
 
+### UPDATE: Version 1.1 
+The way queries work has been vastly improved. Crumblr will now always return something and work faster. 
+ - If nothing is found, the requested size of a wallpaper will be halved and the query will be built again automatically
+
+---
+
 Version 2.0 will include: 
  - more advanced query options
  - more efficient queries 
