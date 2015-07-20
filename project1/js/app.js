@@ -91,10 +91,11 @@ app.buildQuery = function(resize) {
 
 	$.getJSON(searchQuery, function(data) {
 
+		max = searchObj.randomNum(data.data.children.length); 
 		//set boolean for recursion 
 		if ($('#choice-wallpaper').length) {
 			//don't exceed number of found results 
-			max = searchObj.randomNum(data.data.children.length); 
+			
 			console.log(requestedSize);
 			var size = [data.data.children[max].data.preview.images[0].source.width,
 			data.data.children[max].data.preview.images[0].source.height]; 
