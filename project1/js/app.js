@@ -57,60 +57,83 @@ app.createFormObject = function() {
 	retJson.searchSource = $('#search-source').val();
 	retJson.searchWidth = $('#search-width').val();
 	retJson.searchHeight = $('#search-height').val();
+	retJson.randomNum = function(max) {
+		return Math.floor(Math.random() * max);
+	}	
 
 	return retJson; 
 }
 
 //get JSON with user defined query  
-app.buildQuery = function(data) {
-	data = app.createFormObject();
+app.buildQuery = function(resize) {
+	searchObj = app.createFormObject();
 	var a; // for generateContent to return after loop
 	// namespace to app.num later to try 
-	var num = Math.floor(Math.random() * 200); //random indice
-	var sub = data.searchSubr;
-	var tags = data.searchTerms; 
-	var time = data.searchTime;
+	var max = searchObj.randomNum(); 
+	var sub = searchObj.searchSubr;
+	var tags = searchObj.searchTerms; 
+	var time = searchObj.searchTime;
+	var width = typeof resize !== 'undefined' ? resize[0] : searchObj.searchWidth;
+	var height = typeof resize !== 'undefined' ? resize[1] : searchObj.searchHeight;
 	//add width and height reqs 
-	var requestedSize = [parseInt(data.searchWidth), parseInt(data.searchHeight)];
+	var requestedSize = [parseInt(width), parseInt(height)];
+
 	if ($('#choice-video').length) { 
 	//get only youtube links for better compatability
 	var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
-	tags + /*begin*/ '+site%3Ayoutube+url%3Ayoutube+is_self%3Ano+self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=200';
+		tags + /*begin*/ '+site%3Ayoutube+url%3Ayoutube+is_self%3Ano+self%3Ano' /*end*/ +
+		'&restrict_sr=' + sub + '&t=' + time + '&limit=1000';
 	} else {
 		// get only imgur links for better compatability
 		var searchQuery = 'http://www.reddit.com/r/' + sub + '/search.json?q=' + 
-		tags + /*begin*/ '+url%3Aimgur+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=200';
+			tags + /*begin*/ '+url%3Aimgur+is_self%3Ano' /*end*/ +'&restrict_sr=' + sub + '&t=' + time + '&limit=1000';
 	}
-	console.log(searchQuery);
-	$.getJSON(searchQuery, function(data) {
-		var size = [data.data.children[num].data.preview.images[0].source.width,
-					data.data.children[num].data.preview.images[0].source.height];		 
-		if ($('#choice-wallpaper').length) {
-			do {
-			
-				num = Math.floor(Math.random() * 100);
-			a =	app.generateContent(data.data.children[num].data.url,
-				requestedSize,
-				//grab image dimensions 
-			   [data.data.children[num].data.preview.images[0].source.width,
-			data.data.children[num].data.preview.images[0].source.height]);
-			size = [data.data.children[num].data.preview.images[0].source.width,
-					data.data.children[num].data.preview.images[0].source.height];
-			} while ((requestedSize[0] > size[0] || requestedSize[1] > size[1]));
-		}
-			a = a =	app.generateContent(data.data.children[num].data.url,
-				requestedSize,
-				//grab image dimensions 
-			   [data.data.children[num].data.preview.images[0].source.width,
-			data.data.children[num].data.preview.images[0].source.height]);
 
-			return a;
-      		
+	$.getJSON(searchQuery, function(data) {
+
+		//set boolean for recursion 
+		if ($('#choice-wallpaper').length) {
+			//don't exceed number of found results 
+			max = searchObj.randomNum(data.data.children.length); 
+			console.log(requestedSize);
+			var size = [data.data.children[max].data.preview.images[0].source.width,
+			data.data.children[max].data.preview.images[0].source.height]; 
+			var match = false; 
+			var count = 0; //prevent infinite loop 
+
+			while (!match && count <= data.data.children.length) {
+
+				console.log("starting loop");
+				if ((requestedSize[0] < size[0] && requestedSize[1] < size[1])) {
+					match = true; 
+					return a = app.generateContent(data.data.children[max].data.url,
+								size); 
+				} else {
+					max = searchObj.randomNum(data.data.children.length);
+					size = [data.data.children[max].data.preview.images[0].source.width,
+							data.data.children[max].data.preview.images[0].source.height];
+					console.log(requestedSize);
+					console.log("image size:" + size); 
+					count += 1;
+					console.log(count);
+				}
+			
+			};
+
+			if (count >= data.data.children.length) {
+				console.log("nothing found"); 
+				return app.buildQuery([(width/2), (height/2)]); //found nothing...recursion time 
+			}
+			
+		};
+		//video 
+		a = app.generateContent(data.data.children[max].data.url);
+			return a; 
 	});
 }
 
 
-app.generateContent = function(link, requestedSize, size) {
+app.generateContent = function(link) {
 	
 	//console.log(requestedSize, size);
 	/* ----- start wallpaper build ------ */ 
