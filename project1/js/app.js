@@ -104,7 +104,6 @@ app.buildQuery = function(resize) {
 
 			while (!match && count <= data.data.children.length) {
 
-				console.log("starting loop");
 				if ((requestedSize[0] < size[0] && requestedSize[1] < size[1])) {
 					match = true; 
 					return a = app.generateContent(data.data.children[max].data.url,
@@ -113,10 +112,8 @@ app.buildQuery = function(resize) {
 					max = searchObj.randomNum(data.data.children.length);
 					size = [data.data.children[max].data.preview.images[0].source.width,
 							data.data.children[max].data.preview.images[0].source.height];
-					console.log(requestedSize);
-					console.log("image size:" + size); 
+					
 					count += 1;
-					console.log(count);
 				}
 			
 			};
