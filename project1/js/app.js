@@ -90,16 +90,14 @@ app.buildQuery = function(resize) {
 	}
 
 	$.getJSON(searchQuery, function(data) {
-
+		//don't exceed number of found results 
 		max = searchObj.randomNum(data.data.children.length); 
-		//set boolean for recursion 
+		
 		if ($('#choice-wallpaper').length) {
-			//don't exceed number of found results 
-			
-			console.log(requestedSize);
+				
 			var size = [data.data.children[max].data.preview.images[0].source.width,
 			data.data.children[max].data.preview.images[0].source.height]; 
-			var match = false; 
+			var match = false; //set boolean for recursion 
 			var count = 0; //prevent infinite loop 
 
 			while (!match && count <= data.data.children.length) {
@@ -182,7 +180,7 @@ app.generateContent = function(link) {
 			$('video').detach(); 
 			$('#img').detach();
 			$('#source').detach(); 
-		$(this).toggle();
+			$(this).toggle();
  
 	});
 }
