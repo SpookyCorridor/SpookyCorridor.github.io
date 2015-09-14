@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Project #4: Loom"
+description: This is a multi-user real time code editor 
+date:   2015-09-14 10:34:07
+categories: project porfolio loom javascript html 
+---
+
+## Summary 
+
+This is a MEAN stack project built as the final project for my class at General Assembly. It is a real-time 
+multi-user code editor. 
+
+## Project Images 
+![http://i.imgur.com/Bui0wgS.jpg](http://i.imgur.com/Bui0wgS.jpg)
+
+## Summary of Technology 
+
+- HTML
+- CSS
+- JavaScript
+
+## Live Website
+ *link to live project*
+ *link to repository*
