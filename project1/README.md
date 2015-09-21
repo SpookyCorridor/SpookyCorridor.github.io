@@ -17,7 +17,7 @@ It allows you to search for a wallpaper or youtube video with filtering options.
   * [Videos](#video)
 - [Technologies](#technologies) 
 - [TODO](#todo) 
-- [Known Issues](#known issues)
+- [Known Issues](#known-issues)
 
 =====
 
