@@ -56,7 +56,7 @@ __`week`__ is the time (how far back in time to look)
 
 > you can add multiple tags with a '+' :   __`funny+cats`__ 
 
-### Advanced options ![Advanced button]( http://i.imgur.com/flFAPmm.png?5 "Advanced button")
+### Advanced 
 
 ![Wallpaper Query Advanced](http://i.imgur.com/qSGxxuN.png?1 "Wallpaper Advanced Query")
 
@@ -72,7 +72,7 @@ __`videos`__ is the subreddit
 __`top`__ is the sort
 __`month`__ is the time (how far back in time to look) 
 
-# Technologies :floppy_disk:
+# technologies
 
 - HTML5
 - CSS3
