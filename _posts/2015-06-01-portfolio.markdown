@@ -3,7 +3,7 @@ layout: post
 title:  "Crumblr"
 description: This is a portfolio piece for my project. It was written in Jekyll.
 date:   2015-07-10 10:34:07
-categories: portfolio update
+categories: project portfolio update javascript jquey ajax reddit api 
 ---
 
 ## 

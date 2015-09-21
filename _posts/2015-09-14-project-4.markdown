@@ -3,7 +3,7 @@ layout: post
 title:  "Project #4: Loom"
 description: This is a multi-user real time code editor 
 date:   2015-09-14 10:34:07
-categories: project porfolio loom javascript html 
+categories: project porfolio loom javascript html node express mean angular mongodb
 ---
 
 ## Summary 
