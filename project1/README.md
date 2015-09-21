@@ -1,5 +1,4 @@
 #[Crumblr](http://spookycorridor.github.io/project1/)
-===============
 
 Crumblr uses Reddit's powerful search tools in the form of plain english. 
 It allows you to search for a wallpaper or youtube video with filtering options. 
@@ -13,11 +12,11 @@ It allows you to search for a wallpaper or youtube video with filtering options.
 - [intro](#intro)
 - [Installation](#installation)
 - [Queries](#queries)
-  * [Wallpaper](#overview)
+  * [Wallpaper](#wallpaper)
     * [Advanced options](#advanced)
-  * [Videos](#advanced)
-- [Technologies](#technologies)
-- [TODO](#todo)
+  * [Videos](#video)
+- [Technologies](#technologies) 
+- [TODO](#todo) 
 - [Known Issues](#known issues)
 
 =====
@@ -83,7 +82,7 @@ __`month`__ is the time (how far back in time to look)
 - MediaElement.js 
 
 
-# :coffee::coffee::coffee: TODO :coffee::coffee::coffee:
+# TODO :coffee::coffee::coffee:
  - [ ] more advanced query options
  - [X] more efficient queries 
  - [ ] more accepted media formats (currently only imgur and youtube)
