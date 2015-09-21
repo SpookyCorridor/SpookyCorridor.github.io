@@ -82,11 +82,11 @@ __`month`__ is the time (how far back in time to look)
 - MediaElement.js 
 
 
-# TODO :coffee::coffee::coffee:
+# TODO
  - [ ] more advanced query options
  - [X] more efficient queries 
  - [ ] more accepted media formats (currently only imgur and youtube)
  - [ ] multiple color palletes
 
-# Known Issues  :rotating_light:
+# Known Issues
 
