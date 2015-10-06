@@ -1,0 +1,125 @@
+body {
+  color: #F7F7F7;
+  background-color: #474F4B;
+  height: 900px;
+  font-size: 1rem; }
+
+.card {
+  text-align: center;
+  color: #474F4B; }
+  .card .card-title {
+    color: #474F4B; }
+
+.container {
+  margin: 0 auto; }
+
+a {
+  color: #708EC5; }
+
+.crumblr {
+  background-color: #AC9DE0;
+  color: #FFFF31; }
+
+.bedroom-party {
+  background-color: #63C5DF; }
+  .bedroom-party:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #14192D, #160673);
+    opacity: .2; }
+
+.bedroom-party h2 {
+  border-bottom: 3px dashed #F7F7F7;
+  display: inline; }
+
+.bedroom-party a {
+  color: #FF9165; }
+
+.stack-interview {
+  background-color: #D5A472;
+  color: #F7F7F7; }
+
+.loom {
+  background-color: #222124;
+  color: #F7F7F7; }
+
+.stack-interview ul.collapsible {
+  color: #474F4B;
+  background: #474F4B; }
+
+.stack-interview pre,
+.stack-interview .collapsible-body {
+  color: #F7F7F7; }
+
+.stack-initerview ul.collapsible-body {
+  color: #F7F7F7; }
+
+#projects-main {
+  background-color: green;
+  text-align: center;
+  height: 400px; }
+
+.scrollspy {
+  vh: 100%; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+
+img {
+  display: block;
+  margin: 0 auto; }
+
+span > img {
+  display: inline; }
+
+.cover-image {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.cover-image.cat {
+  background: url(http://i.imgur.com/nKymaSv.jpg?1) no-repeat center center fixed; }
+
+.cover-image.crumblr {
+  background: url(http://i.imgur.com/qSGxxuN.png?1) no-repeat center center fixed; }
+
+.cover-image.loom {
+  background: url(http://i.imgur.com/1hC75oQ.png?1) no-repeat center center fixed; }
+
+.cover-image.bedroom-party-city {
+  background: url(http://i.imgur.com/QH2Jsl5.jpg?2) no-repeat center bottom fixed; }
+
+.cover-image.bedroom-party-balloon {
+  background: url(http://i.imgur.com/NWtHak1.jpg?3) no-repeat center center fixed; }
+
+.vid {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; }
+
+.vid-text {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.65; }
+
+i {
+  color: #474F4B; }
+
+.crumblr span > a {
+  color: pink;
+  border-bottom: 1px solid #FFFF31;
+  text-decoration: none; }
+
+.collapsible-header {
+  font-size: 1.5rem; }
+
+/*# sourceMappingURL=main.css.map */

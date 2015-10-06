@@ -1,25 +1,97 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dylan Cairns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="container">
 
-<div class="home">
+<div class="row">
+  <h1 class="col s12 m8 offset-m2 center-align">Dylan Cairns</h1>
+</div>
+<div class="row">
+  <div class="col s12 m8 offset-m2">
+    <div class="card">
+      <div class="card-image">
+        <a href="crumblr.html"><img src="http://i.imgur.com/dNByQdc.png?2"></a>
+        <span class="card-title">Crumblr</span>
+      </div>
+      <div class="card-content">
+        <p>Uses Reddit's search endpoint to help you quickly find random wallpapers or videos based on parameters you supply</p>
+      </div>
+      <div class="card-action">
+        <a href="crumblr.html">explore</a>
+      </div>
+    </div>
+  </div>
 
-  <h1 class="page-heading">Projects</h1>
+  <div class="col s12 m8 offset-m2">
+        <div class="card">
+          <div class="card-image">
+            <a href="bedroom-party.html"><img src="http://i.imgur.com/cmtAyOA.png"></a>
+            <span class="card-title">Bedroom Party</span>
+          </div>
+          <div class="card-content">
+            <p>Choose white noise, images, and music from soundcloud to create your own "bedroom" experience to chill out</p>
+          </div>
+          <div class="card-action">
+            <a href="bedroom-party.html">explore</a>
+          </div>
+        </div>
+      </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <div class="col s12 m8 offset-m2">
+        <div class="card small">
+          <div class="card-image">
+            <a href="stack-interview.html"><img src="http://i.imgur.com/LYl3pzy.png"></a>
+            <span class="card-title">Stack Interview</span>
+          </div>
+          <div class="card-content">
+            <p>Powerful RESTful API and quiz game for technical interview questions both client and server side.</p>
+          </div>
+          <div class="card-action">
+            <a href="stack-interview.html">explore</a>
+          </div>
+        </div>
+      </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <span class="post-meta">{{ post.description | date: "%b %-d, %Y" }}</span>
+      <div class="col s12 m8 offset-m2">
+        <div class="card">
+          <div class="card-image">
+            <a href="loom.html"><img src="http://i.imgur.com/1hC75oQ.png?1"></a>
+            <span class="card-title">Loom</span>
+          </div>
+          <div class="card-content">
+            <p>Realtime multi-user code editor with many features including syntax highlighting for numerous languages, themes, soft-tabs, and auto-closing tags</p>
+          </div>
+          <div class="card-action">
+            <a href="loom.html">explore</a>
+          </div>
+        </div>
+      </div>
 
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+      <a class="btn-floating btn-large teal accent-3">
+        <i class="fa fa-heart"></i>
+      </a>
+      <ul>
+        <li><a href="https://github.com/SpookyCorridor" class="btn-floating yellow lighten-1"><i class="fa fa-github"></i></a></li>
+        <li><a href="mailto:invision33@gmail.com" target="_blank" class="btn-floating pink accent-1"><i class="fa fa-envelope"></i></a></li>
+        <li><a href="https://twitter.com/spookycorridor" class="btn-floating blue"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+     </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+<script src="js/space.min.js"></script>
+
+</body>
+</html>

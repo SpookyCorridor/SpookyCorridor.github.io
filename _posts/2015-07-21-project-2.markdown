@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Project #2: Bedroom Party"
-description: This is a restful API and quiz game 
-date:   2015-08-14 10:33:07
-categories: project porfolio bedroom party sinatra html ruby soundcloud api atmosphere
----
-

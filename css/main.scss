@@ -1,53 +1,167 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
+$off-white: #F7F7F7;
+$off-black: #222124;
+$primary: tomato; 
+$primary-fg: #474F4B; 
+$crumblr-fg: #FFFF31;
+$crumblr-bg: #AC9DE0; 
+$stack-fg: #708EC5; 
+$stack-bg: #DC6373; 
+$bedroom-bg: #63C5DF;
 
+body {
+	color: $off-white;
+	background-color: $primary-fg;
+	height: 900px;  
+	font-size: 1rem;
+}
 
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          480px;
-$on-phablet:       600px;
-$on-laptop:       800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+.card {
+	text-align: center;
+	color: $primary-fg;
+	.card-title {
+		color: $primary-fg;
+	}	
 }
 
 
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+.container {
+	margin: 0 auto;
+}
+
+a {
+	color: $stack-fg;
+}
+
+.crumblr {
+	background-color: $crumblr-bg;
+	color: $crumblr-fg;
+}
+
+.bedroom-party {
+	background-color: $bedroom-bg; 
+	 &:before {
+    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom right,#14192D,#160673);
+		opacity: .2; 
+	}
+}
+
+.bedroom-party h2 {
+	 border-bottom: 3px dashed $off-white; 
+	 display: inline;
+}
+
+.bedroom-party a {
+	color: #FF9165;
+}
+
+.stack-interview {
+	background-color: #D5A472;
+	color: $off-white; 
+}
+
+.loom {
+	background-color: $off-black;
+	color: $off-white; 
+}
+
+.stack-interview ul.collapsible {
+	color: $primary-fg; 
+	background: $primary-fg;
+}
+
+.stack-interview pre,
+.stack-interview .collapsible-body {
+	color: $off-white;
+}
+
+.stack-initerview ul.collapsible-body {
+	color: $off-white;
+}
+
+#projects-main {
+	background-color: green; 
+	text-align: center;
+	height: 400px; 
+}
+
+.scrollspy {
+	vh: 100%; 
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+span>img {
+	display: inline; 
+}
+
+.cover-image {
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.cover-image.cat {
+	background: url(http://i.imgur.com/nKymaSv.jpg?1) no-repeat center center fixed; 
+  
+}
+
+.cover-image.crumblr {
+	background: url(http://i.imgur.com/qSGxxuN.png?1) no-repeat center center fixed; 
+}
+
+.cover-image.loom {
+	background: url(http://i.imgur.com/1hC75oQ.png?1) no-repeat center center fixed; 
+}
+
+.cover-image.bedroom-party-city {
+	background: url(http://i.imgur.com/QH2Jsl5.jpg?2) no-repeat center bottom fixed;
+}
+
+.cover-image.bedroom-party-balloon {
+	background: url(http://i.imgur.com/NWtHak1.jpg?3) no-repeat center center fixed; 
+}
+
+.vid {
+	width: 100vw;
+	height: 100vh; 
+	z-index: 0;
+}
+
+.vid-text {
+	position: absolute;
+	z-index: 1;	
+	opacity: 0.65;
+}
+
+i {
+	color: #474F4B;
+}
+
+.crumblr span > a {
+	color: pink;
+	border-bottom: 1px solid $crumblr-fg;
+	text-decoration: none; 
+}
+
+.collapsible-header {
+	font-size: 1.5rem;
+}
