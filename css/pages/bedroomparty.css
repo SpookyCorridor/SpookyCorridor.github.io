@@ -1,0 +1,67 @@
+/*
+Error: Undefined variable: "$bedroom-bg".
+        on line 2 of ./pages/bedroomparty.scss
+
+1: .bedroom-party {
+2: 	background-color: $bedroom-bg; 
+3: 	 &:before {
+4:     content: '';
+5: 		position: absolute;
+6: 		top: 0;
+7: 		right: 0;
+
+Backtrace:
+./pages/bedroomparty.scss:2
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:293:in `watch'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin.rb:108:in `method_missing'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:384:in `watch_or_update'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/exec/base.rb:52:in `parse'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/exec/base.rb:19:in `parse!'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/bin/sass:13:in `<top (required)>'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/bin/sass:23:in `load'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$bedroom-bg\".\A         on line 2 of ./pages/bedroomparty.scss\A \A 1: .bedroom-party {\A 2: 	background-color: $bedroom-bg; \A 3: 	 &:before {\A 4:     content: '';\A 5: 		position: absolute;\A 6: 		top: 0;\A 7: 		right: 0;"; }

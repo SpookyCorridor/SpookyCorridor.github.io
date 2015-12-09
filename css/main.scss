@@ -1,12 +1,8 @@
-$off-white: #F7F7F7;
-$off-black: #222124;
-$primary: tomato; 
-$primary-fg: #474F4B; 
-$crumblr-fg: #FFFF31;
-$crumblr-bg: #AC9DE0; 
-$stack-fg: #708EC5; 
-$stack-bg: #DC6373; 
-$bedroom-bg: #63C5DF;
+@import 'variables';
+@import 'pages/crumblr';
+@import 'pages/bedroomparty';
+@import 'pages/stackinterview';
+@import 'pages/loom';
 
 body {
 	color: $off-white;
@@ -23,66 +19,12 @@ body {
 	}	
 }
 
-
-
 .container {
 	margin: 0 auto;
 }
 
 a {
 	color: $stack-fg;
-}
-
-.crumblr {
-	background-color: $crumblr-bg;
-	color: $crumblr-fg;
-}
-
-.bedroom-party {
-	background-color: $bedroom-bg; 
-	 &:before {
-    content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: linear-gradient(to bottom right,#14192D,#160673);
-		opacity: .2; 
-	}
-}
-
-.bedroom-party h2 {
-	 border-bottom: 3px dashed $off-white; 
-	 display: inline;
-}
-
-.bedroom-party a {
-	color: #FF9165;
-}
-
-.stack-interview {
-	background-color: #D5A472;
-	color: $off-white; 
-}
-
-.loom {
-	background-color: $off-black;
-	color: $off-white; 
-}
-
-.stack-interview ul.collapsible {
-	color: $primary-fg; 
-	background: $primary-fg;
-}
-
-.stack-interview pre,
-.stack-interview .collapsible-body {
-	color: $off-white;
-}
-
-.stack-initerview ul.collapsible-body {
-	color: $off-white;
 }
 
 #projects-main {
@@ -119,47 +61,13 @@ span>img {
   background-size: cover;
 }
 
-.cover-image.cat {
-	background: url(http://i.imgur.com/nKymaSv.jpg?1) no-repeat center center fixed; 
-  
-}
-
-.cover-image.crumblr {
-	background: url(http://i.imgur.com/qSGxxuN.png?1) no-repeat center center fixed; 
-}
-
-.cover-image.loom {
-	background: url(http://i.imgur.com/1hC75oQ.png?1) no-repeat center center fixed; 
-}
-
-.cover-image.bedroom-party-city {
-	background: url(http://i.imgur.com/QH2Jsl5.jpg?2) no-repeat center bottom fixed;
-}
-
-.cover-image.bedroom-party-balloon {
-	background: url(http://i.imgur.com/NWtHak1.jpg?3) no-repeat center center fixed; 
-}
-
-.vid {
-	width: 100vw;
-	height: 100vh; 
-	z-index: 0;
-}
-
-.vid-text {
-	position: absolute;
-	z-index: 1;	
-	opacity: 0.65;
+.mobile {
+	max-width: 100%;
+	height: auto; 
 }
 
 i {
 	color: #474F4B;
-}
-
-.crumblr span > a {
-	color: pink;
-	border-bottom: 1px solid $crumblr-fg;
-	text-decoration: none; 
 }
 
 .collapsible-header {

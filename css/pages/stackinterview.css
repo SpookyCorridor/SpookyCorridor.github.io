@@ -1,0 +1,68 @@
+/*
+Error: Undefined variable: "$off-white".
+        on line 3 of ./pages/stackinterview.scss
+
+1: .stack-interview {
+2: 	background-color: #D5A472;
+3: 	color: $off-white; 
+4: }
+5: 
+6: .stack-interview ul.collapsible {
+7: 	color: $primary-fg; 
+8: 	background: $primary-fg;
+
+Backtrace:
+./pages/stackinterview.scss:3
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:293:in `watch'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/plugin.rb:108:in `method_missing'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:384:in `watch_or_update'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/exec/base.rb:52:in `parse'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/lib/sass/exec/base.rb:19:in `parse!'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/gems/sass-3.4.18/bin/sass:13:in `<top (required)>'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/bin/sass:23:in `load'
+/Users/Mochii/.rvm/gems/ruby-2.2.1/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$off-white\".\A         on line 3 of ./pages/stackinterview.scss\A \A 1: .stack-interview {\A 2: 	background-color: #D5A472;\A 3: 	color: $off-white; \A 4: }\A 5: \A 6: .stack-interview ul.collapsible {\A 7: 	color: $primary-fg; \A 8: 	background: $primary-fg;"; }
