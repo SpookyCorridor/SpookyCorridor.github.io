@@ -1,3 +1,110 @@
+.crumblr {
+  background-color: #AC9DE0;
+  color: #FFFF31; }
+
+.cover-image.crumblr {
+  background: url(http://i.imgur.com/qSGxxuN.png?1) no-repeat center center;
+  width: 100px; }
+
+.cover-image.cat {
+  background: url(http://i.imgur.com/nKymaSv.jpg?1) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+article .fit {
+  width: 80%; }
+
+.vid {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; }
+
+.vid-text {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.75; }
+
+.cat-text {
+  z-index: 1;
+  opacity: 0.90;
+  padding-top: 18rem; }
+
+.crumblr span > a {
+  color: pink;
+  border-bottom: 1px solid #FFFF31;
+  text-decoration: none; }
+
+.bedroom-party {
+  background-color: #63C5DF; }
+
+.bedroom-party h2 {
+  border-bottom: 3px dashed #F7F7F7;
+  display: inline; }
+
+.bedroom-party a {
+  color: #FF9165; }
+
+.cover-image.bedroom-party-city {
+  background: url(http://i.imgur.com/QH2Jsl5.jpg?2) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.cover-image.bedroom-party-balloon {
+  background: url(http://i.imgur.com/NWtHak1.jpg?3) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.stack-interview {
+  background-color: #D5A472;
+  color: #F7F7F7; }
+
+.stack-interview ul.collapsible {
+  color: #474F4B;
+  background: #474F4B; }
+
+.stack-interview pre {
+  width: 90vw; }
+
+.stack-interview pre,
+.stack-interview .collapsible-body {
+  color: #F7F7F7; }
+
+.stack-initerview ul.collapsible-body {
+  color: #F7F7F7; }
+
+img.icon {
+  width: 50px;
+  height: auto; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    img.icon {
+      width: 80px; } }
+
+.loom {
+  background-color: #222124;
+  color: #F7F7F7; }
+
+.loom-text {
+  z-index: 1;
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  opacity: 0.75; }
+
+article img {
+  width: 100vw;
+  height: auto;
+  padding: 0;
+  margin: 0; }
+  @media (min-width: 1024px) {
+    article img {
+      width: 100%; } }
+
 body {
   color: #F7F7F7;
   background-color: #474F4B;
@@ -16,48 +123,6 @@ body {
 a {
   color: #708EC5; }
 
-.crumblr {
-  background-color: #AC9DE0;
-  color: #FFFF31; }
-
-.bedroom-party {
-  background-color: #63C5DF; }
-  .bedroom-party:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom right, #14192D, #160673);
-    opacity: .2; }
-
-.bedroom-party h2 {
-  border-bottom: 3px dashed #F7F7F7;
-  display: inline; }
-
-.bedroom-party a {
-  color: #FF9165; }
-
-.stack-interview {
-  background-color: #D5A472;
-  color: #F7F7F7; }
-
-.loom {
-  background-color: #222124;
-  color: #F7F7F7; }
-
-.stack-interview ul.collapsible {
-  color: #474F4B;
-  background: #474F4B; }
-
-.stack-interview pre,
-.stack-interview .collapsible-body {
-  color: #F7F7F7; }
-
-.stack-initerview ul.collapsible-body {
-  color: #F7F7F7; }
-
 #projects-main {
   background-color: green;
   text-align: center;
@@ -73,53 +138,48 @@ a {
   margin-right: -50%;
   transform: translate(-50%, -50%); }
 
+.center-text {
+  text-align: center;
+  padding: 10px; }
+
 img {
   display: block;
   margin: 0 auto; }
 
+.half-img {
+  width: 85vw; }
+
+.long-img {
+  width: 70vw; }
+  @media (min-width: 1024px) {
+    .long-img {
+      width: 60%; } }
+
 span > img {
   display: inline; }
-
-.cover-image {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-.cover-image.cat {
-  background: url(http://i.imgur.com/nKymaSv.jpg?1) no-repeat center center fixed; }
-
-.cover-image.crumblr {
-  background: url(http://i.imgur.com/qSGxxuN.png?1) no-repeat center center fixed; }
-
-.cover-image.loom {
-  background: url(http://i.imgur.com/1hC75oQ.png?1) no-repeat center center fixed; }
-
-.cover-image.bedroom-party-city {
-  background: url(http://i.imgur.com/QH2Jsl5.jpg?2) no-repeat center bottom fixed; }
-
-.cover-image.bedroom-party-balloon {
-  background: url(http://i.imgur.com/NWtHak1.jpg?3) no-repeat center center fixed; }
-
-.vid {
-  width: 100vw;
-  height: 100vh;
-  z-index: 0; }
-
-.vid-text {
-  position: absolute;
-  z-index: 1;
-  opacity: 0.65; }
 
 i {
   color: #474F4B; }
 
-.crumblr span > a {
-  color: pink;
-  border-bottom: 1px solid #FFFF31;
-  text-decoration: none; }
-
 .collapsible-header {
-  font-size: 1.5rem; }
+  font-size: 1.2rem; }
+
+h2 {
+  font-size: 2.8rem; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h2 {
+      font-size: 5rem; } }
+
+h3 {
+  font-size: 2.4rem; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h3 {
+      font-size: 4rem; } }
+
+h4 {
+  font-size: 2rem; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h4 {
+      font-size: 3.5rem; } }
 
 /*# sourceMappingURL=main.css.map */

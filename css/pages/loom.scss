@@ -1,0 +1,12 @@
+.loom {
+	background-color: $off-black;
+	color: $off-white; 
+}
+
+.loom-text {
+	z-index: 1;
+	position: absolute; 
+	top: -80%;
+	left: 10%; 
+	opacity: 0.75;
+}
