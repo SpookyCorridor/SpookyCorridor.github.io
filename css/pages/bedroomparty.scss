@@ -1,15 +1,5 @@
 .bedroom-party {
 	background-color: $bedroom-bg; 
-	 &:before {
-    content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: linear-gradient(to bottom right,#14192D,#160673);
-		opacity: .2; 
-	}
 }
 
 .bedroom-party h2 {
@@ -22,10 +12,12 @@
 }
 
 .cover-image.bedroom-party-city {
-	background: url(http://i.imgur.com/QH2Jsl5.jpg?2) no-repeat center bottom fixed;
+	background: url(http://i.imgur.com/QH2Jsl5.jpg?2) no-repeat center center fixed;
+	@include cover; 
 }
 
 .cover-image.bedroom-party-balloon {
 	background: url(http://i.imgur.com/NWtHak1.jpg?3) no-repeat center center fixed; 
+	@include cover; 
 }
 

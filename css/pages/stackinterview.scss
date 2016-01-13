@@ -8,6 +8,10 @@
 	background: $primary-fg;
 }
 
+.stack-interview pre {
+	width: 90vw; 
+}
+
 .stack-interview pre,
 .stack-interview .collapsible-body {
 	color: $off-white;
@@ -15,4 +19,12 @@
 
 .stack-initerview ul.collapsible-body {
 	color: $off-white;
+}
+
+img.icon {
+	width: 50px; 
+	height: auto; 
+	@include tablet {
+		width: 80px;  
+	} 
 }

@@ -3,6 +3,10 @@
 	color: $off-white; 
 }
 
-.cover-image.loom {
-	background: url(http://i.imgur.com/1hC75oQ.png?1) no-repeat center center fixed; 
+.loom-text {
+	z-index: 1;
+	position: absolute; 
+	top: -80%;
+	left: 10%; 
+	opacity: 0.75;
 }

@@ -1,8 +1,21 @@
-@import 'variables';
+
+@import '_variables';
+@import '_mixins';
+
 @import 'pages/crumblr';
 @import 'pages/bedroomparty';
 @import 'pages/stackinterview';
 @import 'pages/loom';
+
+article img {
+	width: 100vw; 
+	height: auto; 
+	padding: 0; 
+	margin: 0;
+	@include desktop {
+		width: 100%; 
+	}
+}
 
 body {
 	color: $off-white;
@@ -45,25 +58,29 @@ a {
   transform: translate(-50%, -50%)
 }
 
+.center-text {
+	text-align: center; 
+	padding: 10px; 
+}
+
 img {
 	display: block;
 	margin: 0 auto;
 }
 
+.half-img {
+	width: 85vw;
+}
+
+.long-img {
+	width: 70vw;
+	@include desktop {
+		width: 60%; 
+	};  
+}
+
 span>img {
 	display: inline; 
-}
-
-.cover-image {
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.mobile {
-	max-width: 100%;
-	height: auto; 
 }
 
 i {
@@ -71,5 +88,26 @@ i {
 }
 
 .collapsible-header {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+}
+
+h2 {
+	font-size: 2.8rem;
+	@include tablet {
+		font-size: 5rem;  
+	} 
+}
+
+h3 {
+	font-size: 2.4rem; 
+	@include tablet {
+		font-size: 4rem;  
+	} 
+}
+
+h4 {
+	font-size: 2rem; 
+	@include tablet {
+		font-size: 3.5rem;  
+	} 
 }
