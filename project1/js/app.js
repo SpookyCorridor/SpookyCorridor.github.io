@@ -91,7 +91,8 @@ app.buildQuery = function(resize) {
 
 	$.getJSON(searchQuery, function(data) {
 		//don't exceed number of found results 
-		max = searchObj.randomNum(data.data.children.length); 
+		console.log(data.data); 
+		max = searchObj.randomNum(data.data.children.length - 1); 
 		
 		if ($('#choice-wallpaper').length) {
 				
@@ -100,23 +101,26 @@ app.buildQuery = function(resize) {
 			var match = false; //set boolean for recursion 
 			var count = 0; //prevent infinite loop 
 
-			while (!match && count <= data.data.children.length) {
+			while (!match && count <= data.data.children.length - 1) {
 
-				if ((requestedSize[0] < size[0] && requestedSize[1] < size[1])) {
+				if ((requestedSize[0] <= size[0] && requestedSize[1] <= size[1])) {
 					match = true; 
 					return a = app.generateContent(data.data.children[max].data.url,
 								size); 
 				} else {
-					max = searchObj.randomNum(data.data.children.length);
-					size = [data.data.children[max].data.preview.images[0].source.width,
-							data.data.children[max].data.preview.images[0].source.height];
+					max = searchObj.randomNum(data.data.children.length - 1);
 					
-					count += 1;
+					if (typeof data.data.children[max].data.preview !== 'undefined') {
+						size = [data.data.children[max].data.preview.images[0].source.width,
+								data.data.children[max].data.preview.images[0].source.height];
+					
+						count += 1;
+					}
 				}
 			
 			};
 
-			if (count >= data.data.children.length) {
+			if (count >= data.data.children.length - 1) {
 				console.log("nothing found"); 
 				return app.buildQuery([(width/2), (height/2)]); //found nothing...recursion time 
 			}
