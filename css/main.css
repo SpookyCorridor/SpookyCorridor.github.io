@@ -100,11 +100,11 @@ article {
       -ms-flex-order: -1;
           order: -1; }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 575px) {
   .process p {
-    -webkit-columns: 2 2rem;
-    -moz-columns: 2 2rem;
-    columns: 2 2rem;
+    -webkit-columns: 2 10rem;
+    -moz-columns: 2 10rem;
+    columns: 2 10rem;
     -webkit-column-gap: 2em;
     -moz-column-gap: 2em;
     column-gap: 1em; }
