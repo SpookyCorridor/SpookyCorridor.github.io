@@ -1,3 +1,11 @@
+.icon {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+  fill: pink;
+  box-shadow: none;
+  color: pink; }
+
 .contact li {
   list-style-type: none; }
 

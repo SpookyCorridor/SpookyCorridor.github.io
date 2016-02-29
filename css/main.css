@@ -13,6 +13,14 @@
   src: url("../fonts/bebas/BEBAS___-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bebas/BEBAS___-webfont.woff") format("woff"), url("fonts/bebas/BEBAS___-webfont.ttf") format("truetype"), url("fonts/bebas/BEBAS___-webfont.svg#bebasregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+.icon {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+  fill: pink;
+  box-shadow: none;
+  color: pink; }
+
 .contact li {
   list-style-type: none; }
 
