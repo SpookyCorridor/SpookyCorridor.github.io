@@ -1,113 +1,60 @@
+@import 'fonts'; 
+@import 'mobile'; 
+@import 'nav'; 
+@import 'photography';
 
-@import '_variables';
-@import '_mixins';
 
-@import 'pages/crumblr';
-@import 'pages/bedroomparty';
-@import 'pages/stackinterview';
-@import 'pages/loom';
-
-article img {
-	width: 100vw; 
-	height: auto; 
-	padding: 0; 
-	margin: 0;
-	@include desktop {
-		width: 100%; 
-	}
+.svg-container {
+	width: 300px;  
+	height: auto;
+}
+.svg {
+	stroke: green; 
 }
 
-body {
-	color: $off-white;
-	background-color: $primary-fg;
-	height: 900px;  
-	font-size: 1rem;
-}
+// .logo-cover {
+//   width: 100%;
+//   height: 80%;
+//   position: absolute;
+//   bottom: 10;
+//   left: 0;
+//   background-color: white;
+//   z-index: 1; 
+//   animation: reveal 0.4s linear; 
+//   animation-fill-mode: both;
+//    overflow: hidden; 
+// }
 
-.card {
-	text-align: center;
-	color: $primary-fg;
-	.card-title {
-		color: $primary-fg;
-	}	
-}
+// .logo {
+//   margin-top: 100px; 
+//   font-size: 4em; 
+//   color: white;
+//   text-align: center; 
+//   width: 200px;
+//   position: relative;
+//   overflow: hidden; 
+// }
 
-.container {
-	margin: 0 auto;
-}
+// @keyframes reveal {
+//   100% {
+//     top:100%;
+//     opacity: 0;  }
+// }
 
-a {
-	color: $stack-fg;
-}
 
-#projects-main {
-	background-color: green; 
-	text-align: center;
-	height: 400px; 
-}
+// section {
+//   display: flex; 
+//   justify-content: center; 
+//   align-items: center; 
+//   text-align: center;
+// }
 
-.scrollspy {
-	vh: 100%; 
-}
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
-}
-
-.center-text {
-	text-align: center; 
-	padding: 10px; 
-}
-
-img {
-	display: block;
-	margin: 0 auto;
-}
-
-.half-img {
-	width: 85vw;
-}
-
-.long-img {
-	width: 70vw;
-	@include desktop {
-		width: 60%; 
-	};  
-}
-
-span>img {
-	display: inline; 
-}
-
-i {
-	color: #474F4B;
-}
-
-.collapsible-header {
-	font-size: 1.2rem;
-}
-
-h2 {
-	font-size: 2.8rem;
-	@include tablet {
-		font-size: 5rem;  
-	} 
-}
-
-h3 {
-	font-size: 2.4rem; 
-	@include tablet {
-		font-size: 4rem;  
-	} 
-}
-
-h4 {
-	font-size: 2rem; 
-	@include tablet {
-		font-size: 3.5rem;  
-	} 
-}
+// .extra {
+//   font-size: 4rem;
+//   font-family: 'Exo2-XLC';
+//   color: #666; 
+//   p {
+//     font-size: 2rem;
+//   }
+// }

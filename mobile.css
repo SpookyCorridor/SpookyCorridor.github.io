@@ -1,0 +1,94 @@
+
+/**
+ * nav
+ */
+
+
+.loom-process {
+  order: 0; }
+  .loom-process p {
+    text-align: left;
+    line-height: 1.5;
+    padding: 0 5px; }
+
+.right-md {
+  order: -1; }
+
+@media screen and (min-width: 460px) {
+  .loom-process p {
+    -webkit-columns: 2 2rem;
+    -moz-columns: 2 2rem;
+    columns: 2 2rem;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 1em; }
+
+  .right-md {
+    order: 2; } }
+.center-img {
+  align-self: center; }
+
+article {
+  margin-bottom: 2rem; }
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #f3f3f3; }
+
+section {
+  color: #222; }
+
+h1 {
+  margin: 0; }
+
+p {
+  margin-bottom: 2rem; }
+
+#macbook {
+  align-items: center; }
+
+.container {
+  width: 90%; }
+
+.project-name {
+  font-family: 'Exo2';
+  font-size: 5rem;
+  color: #666;
+  text-align: center;
+  padding-bottom: 4rem; }
+
+.heading {
+  font-family: 'Exo2-XLC';
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  color: #666;
+  text-align: center; }
+
+.responsive-img {
+  max-width: 100%;
+  height: auto; }
+
+.full-screen {
+  min-height: 100vh;
+  align-items: center;
+  display: flex; }
+
+.full-screen.im {
+  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' standalone='no'?%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg viewBox='0 0 400 200' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.41421;'%3E %3Cg transform='matrix(1,0,0,1,381.999,114)'%3E %3Cg id='Page-1'%3E %3Cg id='iphone'%3E %3Cpath id='bezel' d='M130,257.964C130,266.797 122.809,273.956 113.938,273.956L16.063,273.956C7.192,273.956 0.001,266.797 0.001,257.964L0.001,16.073C0.001,7.24 7.192,0.081 16.063,0.081L113.938,0.081C122.809,0.081 130,7.24 130,16.073L130,257.964Z' style='fill:rgb(253,253,253);stroke-width:2px;stroke:rgb(126,137,163);'/%3E %3Crect id='screen' x='9' y='36' width='111.93' height='199.084' style='fill:none;stroke-width:1px;stroke:rgb(126,137,163);'/%3E %3Cpath id='speaker' d='M77,25.746C77,26.381 76.561,26.893 76.02,26.893L55.918,26.893C55.376,26.893 54.938,26.38 54.938,25.746L54.938,23.166C54.938,22.531 55.377,22.019 55.918,22.019L76.02,22.019C76.561,22.019 77,22.532 77,23.166L77,25.746Z' style='fill:none;stroke-width:1px;stroke:rgb(126,137,163);'/%3E %3Ccircle id='camera' cx='66' cy='12' r='3' style='fill:none;stroke-width:1px;stroke:rgb(126,137,163);'/%3E %3Cellipse id='lock' cx='65.04' cy='254.001' rx='10.04' ry='10.001' style='fill:none;stroke-width:1px;stroke:rgb(126,137,163);'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E ");
+  background-repeat: no-repeat; }
+
+.half-screen {
+  min-height: 50vh;
+  align-items: center; }
+
+.full-screen.hero {
+  flex-direction: column;
+  align-content: center; }
+
+@media screen and (min-width: 960px) {
+  .half-screen {
+    margin-bottom: 20vh; } }
+
+/*# sourceMappingURL=mobile.css.map */

@@ -1,0 +1,37 @@
+.projects {
+  width: 90%; }
+
+.projects a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+.projects > article.row {
+  justify-content: space-around; }
+
+article > div.photo {
+  flex: 1;
+  margin: 1rem 0.5rem; }
+
+@media screen and (min-width: 760px) {
+  article.gallery-container {
+    flex-direction: row; }
+
+  article > div.photo {
+    flex-grow: 1;
+    flex-basis: 270px; } }
+@media screen and (min-width: 900px) {
+  article > div.photo {
+    flex-grow: 1;
+    flex-basis: 33%; } }
+@media screen and (min-width: 1020px) {
+  article > div.photo {
+    flex-grow: 0;
+    flex-basis: 30%; } }
+@media screen and (min-width: 1280px) {
+  article > div.photo {
+    flex-grow: 0;
+    flex-basis: 30%;
+    flex-shrink: 0; } }
+
+/*# sourceMappingURL=photography.css.map */

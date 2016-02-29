@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 897 452" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1.14449,0,0,1.14449,49,1)">
+        <g id="Page-1">
+            <g id="Laptop">
+                <path id="bezel" d="M594,0L98,0C84.504,0 73,11.074 73,24.79L73,351.028L619,351.028L619,24.79C619,11.073 607.537,0 594,0Z" style="fill:none;stroke-width:2px;stroke:rgb(132,146,165);"/>
+                <circle id="webcam" cx="347" cy="19" r="4" style="fill:none;stroke-width:2px;stroke:rgb(132,146,165);"/>
+                <g id="bottom" transform="matrix(1,0,0,1,0,351)">
+                    <path id="Shape" d="M640.812,31.01L51.288,31.01C20.641,31.01 0,20.494 0,16.022L0,2.428C0,1.084 1.335,0 2.995,0L689.104,0C690.766,0 692.103,1.084 692.103,2.428L692.103,16.557C692.096,20.092 676.112,31.01 640.812,31.01Z" style="fill:none;stroke-width:2px;stroke:rgb(132,146,165);"/>
+                    <path id="Line" d="M0.5,14.5L690.243,14.5" style="fill:none;stroke-width:1px;stroke-linecap:square;stroke:rgb(132,146,165);"/>
+                </g>
+                <rect id="screen" x="95" y="39" width="501.074" height="292.009" style="fill:none;stroke-width:1px;stroke:rgb(132,146,165);"/>
+                <path id="touchpad" d="M421,352L421,355.087C421,357.288 416.667,357.953 413.387,357.953L278.815,357.953C275.364,357.953 271,357.289 271,355.087L271,352" style="fill:white;stroke-width:1px;stroke:rgb(132,146,165);"/>
+            </g>
+        </g>
+    </g>
+</svg>
